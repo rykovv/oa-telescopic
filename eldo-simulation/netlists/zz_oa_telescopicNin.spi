@@ -1,0 +1,21 @@
+** Library name: work_VR
+** Cell name: zz_oa_telescopicNin
+** View name: schematic
+
+vssa vssa 0 DC=vssa
+vdda vdda 0 DC=vdda
+
+vcm vcm vssa DC=vcm
+
+i3 vdda ibc200a DC=ibc200a
+i2 vdda ibb50a DC=ibb50a
+ib25a vdda ib25a DC=ib25a
+
+cl vo vssa cl
+
+vip vip vcm AC -0.5 PULSE 'vi1/2'  'vi2/2'  td tr tr pw per
+vin vin vcm AC 0.5  PULSE '-vi1/2' '-vi2/2' td tr tr pw per
+
+xi1 ib25a ibb50a ibc200a vdda vin vip vo vssa oa_telescopicNin
+
+.END

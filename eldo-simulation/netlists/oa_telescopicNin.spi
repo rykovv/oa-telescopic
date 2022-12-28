@@ -1,0 +1,78 @@
+** Generated on: Nov  6 18:36:39 2022
+** Design library name: work_VR
+** Design cell name: zz_oa_telescopicNin
+** Design view name: schematic
+
+** Library name: work_VR
+** Cell name: oa_telescopicNin
+** View name: schematic
+
+.subckt oa_telescopicNin ib25a ibb50a ibc200a vdda vin vip vo vssa
+
+** [done] make currents match reducing ibc200a to 100uA is one way
+** [done (script-only)] unlabel vbpw and connect gate-connected wire to the drain of m1c (make it single ended)
+** play around with m1cb to set Vgs-Vds of m1 and m2
+** in parallel saturate m3bw (200 Vov), then the rest of FETs of WS current mirror except m3r
+** it should come alive
+
+** Telescopic OpAmp
+
+.param l3 = 180e-9
+.param w3 = 4.14e-6
+.param mm3 = 2
+
+.param l1 = 180e-9
+.param w1 = 720e-9
+.param mm1 = 2
+
+.param mm3b = 2
+
+** Top devices
+m3 net4 net7 vdda vdda pch L='l3' W='w3' AD=648e-15 AS=648e-15 PD=3.78e-6 PS=3.78e-6 M='mm3'
+m4 net5 net7 vdda vdda pch L='l3' W='w3' AD=648e-15 AS=648e-15 PD=3.78e-6 PS=3.78e-6 M='mm3'
+
+** L2 Cascode
+m3c net7 vbpcw net4 vdda pch L='l3' W='w3' AD=648e-15 AS=648e-15 PD=3.78e-6 PS=3.78e-6 M='mm3'
+m4c vo   vbpcw net5 vdda pch L='l3' W='w3' AD=648e-15 AS=648e-15 PD=3.78e-6 PS=3.78e-6 M='mm3'
+
+** L1 Cascode
+m1c net7 ibc200a net3 vssa nch L='l1' W='w1' AD=324e-15 AS=324e-15 PD=2.34e-6 PS=2.34e-6 M='mm1'
+m2c vo   ibc200a net6 vssa nch L='l1' W='w1' AD=324e-15 AS=324e-15 PD=2.34e-6 PS=2.34e-6 M='mm1'
+
+** Cascode FETs bias device
+m1cb ibc200a ibc200a vt vssa nch L=1.44e-6 W=1.44e-6 AD=324e-15 AS=324e-15 PD=2.34e-6 PS=2.34e-6 M=2
+
+** Input FETs
+m2 net6 vip vt vssa nch L='l1' W='w1' AD=324e-15 AS=324e-15 PD=2.34e-6 PS=2.34e-6 M='mm1'
+m1 net3 vin vt vssa nch L='l1' W='w1' AD=324e-15 AS=324e-15 PD=2.34e-6 PS=2.34e-6 M='mm1'
+
+** Tail and current miror devices
+m5 vt    ib25a vssa vssa nch L=1.44e-6 W=5.58e-6 AD=2.511e-12 AS=2.511e-12 PD=12.06e-6 PS=12.06e-6 M=20
+m6 ib25a ib25a vssa vssa nch L=1.44e-6 W=5.58e-6 AD=2.511e-12 AS=2.511e-12 PD=12.06e-6 PS=12.06e-6 M=2
+
+
+** Wide-swing current mirror
+
+m3r   net2  vbpcw vdda vdda pch L=600e-9 W=3e-6 AD=648e-15 AS=648e-15 PD=3.78e-6 PS=3.78e-6 M=1
+m3bw  net1  vbpw  vdda vdda pch L='l3'   W='w3' AD=648e-15 AS=648e-15 PD=3.78e-6 PS=3.78e-6 M='mm3b'
+m3cbw vbpcw vbpcw net2 vdda pch L='l3'   W='w3' AD=648e-15 AS=648e-15 PD=3.78e-6 PS=3.78e-6 M='mm3b'
+m3bwc vbpw  vbpcw net1 vdda pch L='l3'   W='w3' AD=648e-15 AS=648e-15 PD=3.78e-6 PS=3.78e-6 M='mm3b'
+
+.param l0 = 720e-9
+.param w0 = 5.58e-6
+.param mm0 = 2
+
+** Tail current devices L2
+m8c vbpw  ibb50a net12 vssa nch L='l0' W='w0' AD=2.511e-12 AS=2.511e-12 PD=12.06e-6 PS=12.06e-6 M='mm0'
+m7c vbpcw ibb50a net10 vssa nch L='l0' W='w0' AD=2.511e-12 AS=2.511e-12 PD=12.06e-6 PS=12.06e-6 M='mm0'
+
+** Tail current devices L1
+m7 net10 vbn vssa vssa nch L='l0' W='w0' AD=2.511e-12 AS=2.511e-12 PD=12.06e-6 PS=12.06e-6 M='mm0'
+m8 net12 vbn vssa vssa nch L='l0' W='w0' AD=2.511e-12 AS=2.511e-12 PD=12.06e-6 PS=12.06e-6 M='mm0'
+
+** Current mirror leg
+m0c ibb50a ibb50a vbn  vssa nch L='l0' W='w0' AD=2.511e-12 AS=2.511e-12 PD=12.06e-6 PS=12.06e-6 M='mm0'
+m0  vbn    vbn    vssa vssa nch L='l0' W='w0' AD=2.511e-12 AS=2.511e-12 PD=12.06e-6 PS=12.06e-6 M='mm0'
+
+.ends oa_telescopicNin
+** End of subcircuit definition.

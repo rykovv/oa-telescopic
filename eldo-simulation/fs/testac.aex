@@ -1,0 +1,46 @@
+
+TITLE AC response for 2-stage opamp with NMOS inputs
+EXTRACT for AC ANALYSIS                       
+  TEMPERATURE =  5.0000000000E+01 Celsius
+  ALTER index 0
+    *OASCALE       =  1.0000000000E+00   
+    *ADC           =  5.3125056050E+01   
+    *UGBW          =  8.9591555360E+05   
+    *UGBW_PHASE    = -9.4721504656E+01   
+    *PHASE_MARGIN  =  8.5278495344E+01   
+
+EXTRACT for AC ANALYSIS                       
+  TEMPERATURE =  5.0000000000E+01 Celsius
+  ALTER index 1    OPAMP SCALED BY 2X
+    *OASCALE       =  2.0000000000E+00   
+    *ADC           =  5.3125056047E+01   
+    *UGBW          =  8.9389266795E+05   
+    *UGBW_PHASE    = -9.6150220175E+01   
+    *PHASE_MARGIN  =  8.3849779825E+01   
+
+EXTRACT for AC ANALYSIS                       
+  TEMPERATURE =  5.0000000000E+01 Celsius
+  ALTER index 2    OPAMP SCALED BY 4X
+    *OASCALE       =  4.0000000000E+00   
+    *ADC           =  5.3125056041E+01   
+    *UGBW          =  8.8821729136E+05   
+    *UGBW_PHASE    = -9.8947361196E+01   
+    *PHASE_MARGIN  =  8.1052638804E+01   
+
+EXTRACT for AC ANALYSIS                       
+  TEMPERATURE =  5.0000000000E+01 Celsius
+  ALTER index 3    OPAMP SCALED BY 8X
+    *OASCALE       =  8.0000000000E+00   
+    *ADC           =  5.3125056030E+01   
+    *UGBW          =  8.7118783599E+05   
+    *UGBW_PHASE    = -1.0420411820E+02   
+    *PHASE_MARGIN  =  7.5795881802E+01   
+
+EXTRACT for AC ANALYSIS                       
+  TEMPERATURE =  5.0000000000E+01 Celsius
+  ALTER index 4    OPAMP SCALED BY 16X
+    *OASCALE       =  1.6000000000E+01   
+    *ADC           =  5.3125056007E+01   
+    *UGBW          =  8.2274913068E+05   
+    *UGBW_PHASE    = -1.1299995844E+02   
+    *PHASE_MARGIN  =  6.7000041556E+01   

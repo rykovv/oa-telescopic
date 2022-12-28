@@ -1,0 +1,2040 @@
+  Run on ecs-pa-einstein.ecs.csus.edu (Linux 3.10.0-1160.76.1.el7.x86_64)
+
+-----------| System Information |---------------
+
+*** User  : vrykov
+*** OS    : Red Hat Enterprise Linux Server release 7.9 (Maipo) [VCO = aol]
+*** CPU   :
+    Intel(R) Xeon(R) Gold 6254 CPU @ 3.10GHz
+    Number of physical processors     : 8
+    Hyper-Threading Technology        : N/A
+    Number of cpu cores               : N/A
+    Number of logical processors      : N/A
+*** Freq  : 3092.734MHz
+*** Cache : 25344 KB
+*** MEM   : 16265840 kB
+*** Date  : Sun Sep 25 13:00:31 2022
+
+*** Eldo VERSION : ELDO 2021.2 update2 (64 bits) Thu Jun 17 15:42:08 GMT 2021
+
+/opt/siemens/amsv/aol/bin/eldo_64.exe -i testac.in
+
+
+***> 25-Sep-2022 13:00:31 - STARTING PARSING PHASE ...
+
+***** PRE-PROCESSING ...
+1*******25-Sep-22 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:31******
+
+0AC response for 2-stage opamp with NMOS inputs
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  ********************************************************************************
+    3  
+    4  *Set up variables and include netlists
+    5  ** including /home/student/vrykov/EEE235/sims/zz_oa2stageNin/setup.in
+    1  * Setup file for spice sims
+    2  
+    3  ********************************************************************************
+    4  * Set up simulator options
+    5  ********************************************************************************
+    6  
+    7  *** Set input/output options ***
+    8  
+    9  *.option scale=1u    !  Set scale factor for MOS W, L, AD, AS, PD, PS inputs
+   10  
+   11  .WIDTH OUT=120      
+   12  .OPTION ingold=2    
+   13  .OPTION numdgt=10   
+   14  .OPTION notrc       
+Note 71: In file "/home/student/vrykov/EEE235/sims/zz_oa2stageNin/setup.in" line 17:
++   Option NOWARN found: no more warning 240 displayed.
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***> 25-Sep-2022 13:00:31 - PARSING completed: WALL CLOCK ELAPSED TIME 0s <***
+
+
+***> 25-Sep-2022 13:00:31 - STARTING ELABORATION PHASE ...
+
+----------------| Design Summary |-----------------
+45 elements
+10 nodes 
+4 sources
+
+Detail about objects and nodes found in the design:
+Number of nodes                     10
+Number of resistors                 3
+Number of capacitors                2
+Number of inductors                 0
+Number of voltage sources           3
+Number of current sources           1
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       36
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements            45
+Repartition per level of MOS
+  BSIM3V3 36
+---------------------------------------------------
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+------------| Elaboration Information |------------
+***> Memory:
+Peak memory usage (MB): 41
+Virtual memory usage (MB): 433
+
+***> Inputs:
+3 input signals
+---------------------------------------------------
+Note 108: Acquiring license Analog Simulator Kernel (eldokernel)
+*** DATE: 25-Sep-2022 13:00:31
+*** TITLE: AC response for 2-stage opamp with NMOS inputs
+
+TEMPERATURE : 85.000000 degrees C
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:31******
+
+0AC response for 2-stage opamp with NMOS
+
+0****     MODELS PARAMETERS                TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+ DEVICE          MOS
+ MODEL: CMOSN
+ TYPE            N
+ LEVEL 53 : Bsim3v3 version 3.1
+ LIBRARY : /titan/software/mentorms/tech/ami05u/eldo/ami.lib
+ CORNER  : SS
+
+  names    values          units     names    values          units     names    values          units   
+  -----    ------          -----     -----    ------          -----     -----    ------          -----   
+VER     = 3.1000000000E+00 -       MOBMOD  = 1                -       CAPMOD  = 1                -      
+VFBFLAG = 0                -       NQSMOD  = 0                -       NOIMOD  = 2                -      
+DERIV   = 1                -       BINFLAG = 0                -       PARAMCHK= 0                -      
+IIMOD   = 0                -       FNLEV   = 0                -       
+
+ * Threshold voltage related model parameters *
+   ------------------------------------------  
+VTH0    = 7.8630264380E-01 V       DELVTO  = 0.0              V       K1      = 9.1273172360E-01 V^1/2  
+K2      =-9.2073900000E-02 -       NCH     = 1.7300000000E+17 At/cm^3 K3      = 9.9705100000E+00 -      
+K3B     = 4.2632581000E+00 1/V     DVT0    = 2.7463000000E+00 -       DVT1    = 4.5947810000E-01 -      
+DVT2    =-1.0395930000E-01 1/V     DVT0W   =-4.3066193000E+00 -       DVT1W   = 2.7848220000E+05 1/m    
+DVT2W   = 5.5545000000E-02 1/V     DSUB    = 3.4420280000E-01 -       ETA0    = 1.0528940000E-03 -      
+ETAB    =-1.3436400000E-02 1/V     
+
+ * Subthreshold related parameters *
+   -------------------------------  
+NFACTOR = 1.0426200000E+00 -       CDSC    =-4.0000000000E-04 F/m^2   CDSCB   =-1.0000000000E-04 F/Vm^2 
+CDSCD   = 0.0              F/Vm^2  VOFF    =-7.5611700000E-02 V       CIT     = 0.0              F/m^2  
+
+ * Mobility related model parameters *
+   ---------------------------------  
+UA      = 1.1026200000E-10 m/V     UB      = 1.7901400000E-18 (m/V)^2 UC      = 2.6527800000E-11 m/V^2  
+U0      = 4.8749661372E-02 unit1   MULUO   = 1.0000000000E+00 -       
+
+ * Saturation related parameters *
+   -----------------------------  
+PCLM    = 1.5345416000E+00 -       KETA    =-1.5851700000E-02 1/V     DELTA   = 1.0000000000E-03 V      
+A0      = 8.1088042130E-01 -       A1      = 0.0              1/V     A2      = 1.2000000000E+00 -      
+B0      = 1.3470600000E-06 m       B1      = 1.3347200000E-06 m       PVAG    = 2.2221198000E+00 -      
+PDIBLC1 = 6.0465230000E-06 -       PDIBLC2 = 5.7337000000E-04 -       PDIBLCB = 0.0              1/V    
+DROUT   = 9.9953830000E-04 -       VSAT    = 1.7020000000E+05 m/s     PSCBE1  = 3.8300410000E+08 V/m    
+PSCBE2  = 3.2166600000E-05 m/V     PRWB    = 3.8213300000E-02 V^-1/2  PRWG    =-2.5707500000E-02 1/V    
+RDSW    = 1.5249486292E+03 Ohm.um  AGS     = 2.2226440000E-01 1/V     
+
+ * Geometry modulation related parameters *
+   --------------------------------------  
+LREF    = 0.0              m       WREF    = 0.0              m       LINT    = 5.1143095000E-09 m      
+DLC     = 5.1143095000E-09 m       LL      = 5.5449600000E-15 m       LW      = 0.0              m      
+LWL     =-8.2870000000E-20 m       LLN     = 1.0000000000E+00 -       LWN     = 1.0000000000E+00 -      
+WINT    = 1.3910482000E-07 m       DWC     = 1.3910482000E-07 m       WL      = 0.0              m      
+WW      = 0.0              m       WWL     =-6.5303100000E-20 m       WLN     = 1.0000000000E+00 -      
+WWN     = 1.0000000000E+00 -       WR      = 1.0000000000E+00 -       W0      = 3.3242700000E-07 m      
+DWG     = 0.0              m/V     DWB     = 2.8767000000E-09 m/V^1/2 
+
+ * Temperature effect parameters *
+   -----------------------------  
+UPDATEPHI= 0                -       AT      = 1.0000000000E+03 m/sec   UTE     =-2.1286493000E+00 -      
+KT1     =-4.5844100000E-01 V       KT2     =-5.8635600000E-02 -       KT1L    =-1.0423200000E-08 mV     
+UA1     =-4.9182000000E-10 m/V     UB1     =-5.7307600000E-19 (m/V)^2 UC1     =-1.0206800000E-12 m/V^2  
+PRT     = 1.0364200000E+03 Ohm.um  
+
+ * Overlap capacitance related and dynamic model parameters *
+   --------------------------------------------------------  
+XPART   = 0.0              -       CLC     = 1.0000000000E-07 m       CLE     = 6.0000000000E-01 -      
+CGDO    = 2.3000000000E-10 F/m     CGDL    = 0.0              F/m     CGSO    = 2.3000000000E-10 F/m    
+CGSL    = 0.0              F/m     CGBO    = 3.0000000000E-10 F/m     CKAPPA  = 6.0000000000E-01 V      
+CF      = 0.0              F/m     ELM     = 5.0000000000E+00 -       VFBCV   =-1.0000000000E+00 -      
+
+ * Substrate current related model parameters *
+   ----------------------------------------------
+ALPHA0  = 0.0              m/V     BETA0   = 0.0              V       
+
+ * Process and parameters extraction related model parameters *
+   ----------------------------------------------------------  
+TOX     = 1.3900000000E-08 m       DTOXCV  = 0.0              m       NGATE   = 0.0              At/cm^3
+NLX     = 0.0              m       XL      = 0.0              m       XW      = 0.0              m      
+ND      = 1.0000000000E+20 At/cm^3 
+
+ * Noise effect related model parameters *
+   -------------------------------------  
+THMLEV  = 0                -       FLKLEV  = 0                -       AF      = 1.0000000000E+00 -      
+KF      = 1.0000000000E-09 -       EF      = 1.0000000000E+00 -       NSTAR   = 2.0000000000E+14 -      
+FLKFLAG = 0.0              -       NOIFLAG = 0.0              -       NOIA    = 9.0000000000E+19 unit2  
+NOIB    = 2.3000000000E+05 1/V     NOIC    =-5.8000000000E-12 unit3   EM      = 5.1000000000E+05 V/m    
+WPEMOD  = 0.0              -       SCREF   = 1.0000000000E-06 m       KVTH0WE = 0.0              V      
+K2WE    = 0.0              -       KU0WE   = 0.0              -       WEB     = 0.0              -      
+WEC     = 0.0              -       GAMMA   = 6.6666666667E-01 -       
+
+ * Binning Parameters *
+   -------------------  
+BINUNIT = 0.0              -       
+* Display only non null Binning Parameters *
+WK3     = 7.2628700000E-05 -       WK3B    =-3.9488000000E-05 -       WW0     = 2.1247670000E-12 -      
+LU0     =-1.1505000000E-05 -       LUC     =-1.5223400000E-17 -       LVSAT   =-2.6570900000E-02 -      
+PVSAT   = 5.9163450000E-09 -       LA0     = 8.8211250000E-08 -       WA0     = 5.9187890000E-08 -      
+PA0     =-4.0368600000E-13 -       LAGS    =-1.4431190000E-07 -       WAGS    = 8.3551600000E-08 -      
+PAGS    =-1.8516200000E-13 -       WB0     = 1.9145400000E-13 -       WB1     =-1.6000000000E-13 -      
+LKETA   = 2.0012100000E-08 -       WKETA   = 1.0121000000E-09 -       PKETA   = 2.0000000000E-14 -      
+LRDSW   = 2.7247400000E-04 -       WRDSW   = 9.5753100000E-06 -       PRDSW   = 1.4238290000E-10 -      
+LPRWG   = 6.0000000000E-09 -       LVOFF   = 2.8319000000E-08 -       WVOFF   =-5.8248600000E-08 -      
+LPCLM   =-2.9579400000E-08 -       LPDIBLC1= 2.4983560000E-09 -       LPDIBLC2=-7.0000000000E-11 -      
+LDROUT  = 9.8096350000E-10 -       LPSCBE1 = 3.6500000000E+02 -       LPVAG   =-9.3936830000E-07 -      
+LDELTA  = 1.1988000000E-08 -       WDELTA  = 8.0000000000E-09 -       WUTE    = 6.0000000000E-07 -      
+WUA1    = 3.4660980000E-15 -       WUB1    =-4.4049000000E-24 -       LUC1    = 1.5206800000E-17 -      
+WUC1    =-6.0000000000E-17 -       WVTH0   =-2.0558340000E-09 -       PVTH0   =-8.0000000000E-14 -      
+   ------------------------------------------------------------------------  
+
+ *** Common extrinsic model parameters ***
+OPTACM  = 1                -       GDSNOI  = 1.0000000000E+00 -       ACM     = 2                -      
+ALEV    = 2                -       RLEV    = 2                -       
+ * Access resistances related parameters *
+RD      = 0.0              Ohm     RS      = 0.0              Ohm     RSH     = 9.0000000000E+01 Ohm/Sq.
+RDC     = 0.0              Ohm     RSC     = 0.0              Ohm     
+ * Geometry related parameters *
+LD      = 5.1143095000E-09 m       WD      = 1.3910482000E-07 m       DL      = 0.0              m      
+DW      = 0.0              m       LDIF    = 0.0              m       HDIF    = 8.0000000000E-07 m      
+WMLT    = 1.0000000000E+00 -       LMLT    = 1.0000000000E+00 -       DEL     = 0.0              m      
+XJ      = 1.5000000000E-07 m       
+ * Static bulk-diode related parameters *
+DIOLEV  = 2                -       JS      = 2.4512713132E-03 A/m^2   JSW     = 7.3538139396E-10 A/m    
+IS      = 0.0              A       NJ      = 1.0074000000E+00 -       NDS     = 8.2800000000E+00 -      
+VNDS    =-1.0900000000E+00 V       VDLIN   = 5.0000000000E-01 -       
+ * Dynamic bulk-diode related parameters *
+DCAPLEV = 5                -       CJGATE  = 3.1757535108E-10         CBD     = 0.0              F      
+CBS     = 0.0              F       CJ      = 5.0212656554E-04 F/m^2   CJSW    = 3.1757535108E-10 F/m    
+FC      = 0.0              -       MJ      = 3.3750000000E-01 -       MJSW    = 3.3600000000E-01 -      
+TT      = 1.6000000000E-08 s       PB      = 8.1899001841E-01 V       PBSW    = 8.1298381348E-01 V      
+ * Temperature related Parameters 
+EG      = 1.1600000000E+00 eV      GAP1    = 7.0200000000E-04 eV/degK GAP2    = 1.1080000000E+03 degK   
+TNOM    = 2.5000000000E+01 degC    TLEV    = 2                -       TLEVC   = 0                -      
+TLEVI   = 3                -       XTI     = 3.0000000000E+00 -       
+ * Temperature Access Resistance related parameters * TLEVR = 1 
+TRD1    = 0.0              1/degK  TRS1    = 0.0              1/degK  TRSH1   = 0.0              1/degK 
+TRD2    = 0.0              unit4   TRS2    = 0.0              unit4   TRSH2   = 0.0              unit4  
+
+unit1 represents m^2/V/sec
+unit2 represents V^-1.m^-2
+unit3 represents V^-1.m^2
+unit4 represents 1/degK^2
+
+ DEVICE          MOS
+ MODEL: CMOSP
+ TYPE            P
+ LEVEL 53 : Bsim3v3 version 3.1
+ LIBRARY : /titan/software/mentorms/tech/ami05u/eldo/ami.lib
+ CORNER  : SS
+
+  names    values          units     names    values          units     names    values          units   
+  -----    ------          -----     -----    ------          -----     -----    ------          -----   
+VER     = 3.1000000000E+00 -       MOBMOD  = 1                -       CAPMOD  = 1                -      
+VFBFLAG = 0                -       NQSMOD  = 0                -       NOIMOD  = 2                -      
+DERIV   = 1                -       BINFLAG = 0                -       PARAMCHK= 0                -      
+IIMOD   = 0                -       FNLEV   = 0                -       
+
+ * Threshold voltage related model parameters *
+   ------------------------------------------  
+VTH0    =-1.0227119840E+00 V       DELVTO  = 0.0              V       K1      = 5.6475326280E-01 V^1/2  
+K2      = 5.0400000000E-03 -       NCH     = 5.7500000000E+16 At/cm^3 K3      = 4.9723900000E+00 -      
+K3B     =-1.8386777000E+00 1/V     DVT0    = 2.6188000000E+00 -       DVT1    = 6.0052740000E-01 -      
+DVT2    =-2.7388300000E-02 1/V     DVT0W   = 1.0000000000E+00 -       DVT1W   = 8.4591600000E+05 1/m    
+DVT2W   =-1.0597020000E-06 1/V     DSUB    = 6.2764580000E-01 -       ETA0    = 7.7061400000E-02 -      
+ETAB    =-3.3759500000E-02 1/V     
+
+ * Subthreshold related parameters *
+   -------------------------------  
+NFACTOR = 1.2440000000E+00 -       CDSC    = 0.0              F/m^2   CDSCB   = 1.0545100000E-05 F/Vm^2 
+CDSCD   = 8.3531730000E-06 F/Vm^2  VOFF    =-1.3260000000E-01 V       CIT     = 0.0              F/m^2  
+
+ * Mobility related model parameters *
+   ---------------------------------  
+UA      = 3.3824260000E-09 m/V     UB      = 1.0978070000E-21 (m/V)^2 UC      =-5.5166400000E-11 m/V^2  
+U0      = 2.5216760421E-02 unit1   MULUO   = 1.0000000000E+00 -       
+
+ * Saturation related parameters *
+   -----------------------------  
+PCLM    = 4.0835844000E+00 -       KETA    =-2.4530080000E-03 1/V     DELTA   = 9.0000000000E-03 V      
+A0      = 1.1726210166E+00 -       A1      = 0.0              1/V     A2      = 1.5000000000E+00 -      
+B0      = 1.4752350000E-06 m       B1      = 3.3217650000E-06 m       PVAG    = 2.0000000000E+00 -      
+PDIBLC1 = 8.6418360000E-04 -       PDIBLC2 = 2.1454000000E-03 -       PDIBLCB = 0.0              1/V    
+DROUT   = 9.0242400000E-02 -       VSAT    = 1.5090000000E+05 m/s     PSCBE1  = 4.5034500000E+08 V/m    
+PSCBE2  = 2.8879780000E-06 m/V     PRWB    =-1.0000000000E-03 V^-1/2  PRWG    =-1.0500000000E-06 1/V    
+RDSW    = 2.4749496805E+03 Ohm.um  AGS     = 1.8322060000E-01 1/V     
+
+ * Geometry modulation related parameters *
+   --------------------------------------  
+LREF    = 0.0              m       WREF    = 0.0              m       LINT    =-1.4037500000E-08 m      
+DLC     =-1.4037500000E-08 m       LL      = 0.0              m       LW      = 0.0              m      
+LWL     =-1.3249900000E-20 m       LLN     = 1.0000000000E+00 -       LWN     = 1.0000000000E+00 -      
+WINT    = 2.1235311000E-07 m       DWC     = 2.1235311000E-07 m       WL      = 0.0              m      
+WW      = 0.0              m       WWL     =-4.3804800000E-20 m       WLN     = 1.0000000000E+00 -      
+WWN     = 1.0000000000E+00 -       WR      = 1.0000000000E+00 -       W0      = 1.4800000000E-06 m      
+DWG     = 0.0              m/V     DWB     = 1.1300000000E-08 m/V^1/2 
+
+ * Temperature effect parameters *
+   -----------------------------  
+UPDATEPHI= 0                -       AT      = 1.0000000000E+03 m/sec   UTE     =-1.9736859000E+00 -      
+KT1     =-5.4555700000E-01 V       KT2     =-4.6417400000E-02 -       KT1L    =-7.6524980000E-09 mV     
+UA1     =-2.1729670000E-09 m/V     UB1     =-1.5787700000E-18 (m/V)^2 UC1     = 8.2703530000E-11 m/V^2  
+PRT     = 0.0              Ohm.um  
+
+ * Overlap capacitance related and dynamic model parameters *
+   --------------------------------------------------------  
+XPART   = 0.0              -       CLC     = 1.0000000000E-07 m       CLE     = 6.0000000000E-01 -      
+CGDO    = 3.1700000000E-10 F/m     CGDL    = 0.0              F/m     CGSO    = 3.1700000000E-10 F/m    
+CGSL    = 0.0              F/m     CGBO    = 3.0000000000E-10 F/m     CKAPPA  = 6.0000000000E-01 V      
+CF      = 0.0              F/m     ELM     = 5.0000000000E+00 -       VFBCV   =-1.0000000000E+00 -      
+
+ * Substrate current related model parameters *
+   ----------------------------------------------
+ALPHA0  = 0.0              m/V     BETA0   = 0.0              V       
+
+ * Process and parameters extraction related model parameters *
+   ----------------------------------------------------------  
+TOX     = 1.4200000000E-08 m       DTOXCV  = 0.0              m       NGATE   = 0.0              At/cm^3
+NLX     = 0.0              m       XL      = 0.0              m       XW      = 0.0              m      
+ND      = 1.0000000000E+20 At/cm^3 
+
+ * Noise effect related model parameters *
+   -------------------------------------  
+THMLEV  = 0                -       FLKLEV  = 0                -       AF      = 1.0000000000E+00 -      
+KF      = 1.0000000000E-09 -       EF      = 1.0000000000E+00 -       NSTAR   = 2.0000000000E+14 -      
+FLKFLAG = 0.0              -       NOIFLAG = 0.0              -       NOIA    = 9.0000000000E+18 unit2  
+NOIB    = 6.3000000000E+04 1/V     NOIC    =-9.8000000000E-13 unit3   EM      = 5.1000000000E+05 V/m    
+WPEMOD  = 0.0              -       SCREF   = 1.0000000000E-06 m       KVTH0WE = 0.0              V      
+K2WE    = 0.0              -       KU0WE   = 0.0              -       WEB     = 0.0              -      
+WEC     = 0.0              -       GAMMA   = 6.6666666667E-01 -       
+
+ * Binning Parameters *
+   -------------------  
+BINUNIT = 0.0              -       
+* Display only non null Binning Parameters *
+WK3     = 8.1242280000E-06 -       WK3B    =-1.7903820000E-06 -       WU0     =-7.0929510000E-06 -      
+WUA     =-8.9791100000E-16 -       WUB     =-1.4242700000E-26 -       WUC     =-2.6028000000E-18 -      
+LVSAT   =-1.9031100000E-02 -       PVSAT   = 1.6581970000E-08 -       LA0     =-4.8000000000E-07 -      
+LAGS    = 3.6629400000E-08 -       LKETA   =-9.2282030000E-09 -       WKETA   = 2.0311300000E-09 -      
+PKETA   = 1.1278130000E-14 -       LA1     = 4.3166970000E-11 -       LA2     = 4.3984160000E-09 -      
+PRDSW   =-4.7695800000E-12 -       LVOFF   = 1.5000000000E-08 -       LPCLM   = 5.3814400000E-08 -      
+LPDIBLC1= 4.2683940000E-09 -       LPDIBLC2= 6.4803710000E-12 -       LPSCBE1 = 2.7320967390E+02 -      
+LPSCBE2 = 5.8953280000E-13 -       LPVAG   = 2.2163870000E-07 -       LDELTA  = 8.2998330000E-09 -      
+WUTE    = 5.7867110000E-08 -       WUA1    =-1.3314300000E-16 -       WUB1    = 1.5854590000E-24 -      
+WUC1    =-3.7462000000E-18 -       
+   ------------------------------------------------------------------------  
+
+ *** Common extrinsic model parameters ***
+OPTACM  = 1                -       GDSNOI  = 1.0000000000E+00 -       ACM     = 2                -      
+ALEV    = 2                -       RLEV    = 2                -       
+ * Access resistances related parameters *
+RD      = 0.0              Ohm     RS      = 0.0              Ohm     RSH     = 9.0000000000E+01 Ohm/Sq.
+RDC     = 0.0              Ohm     RSC     = 0.0              Ohm     
+ * Geometry related parameters *
+LD      =-1.4037500000E-08 m       WD      = 2.1235311000E-07 m       DL      = 0.0              m      
+DW      = 0.0              m       LDIF    = 0.0              m       HDIF    = 8.0000000000E-07 m      
+WMLT    = 1.0000000000E+00 -       LMLT    = 1.0000000000E+00 -       DEL     = 0.0              m      
+XJ      = 1.5000000000E-07 m       
+ * Static bulk-diode related parameters *
+DIOLEV  = 2                -       JS      = 1.6016553874E-03 A/m^2   JSW     = 8.4189578057E-10 A/m    
+IS      = 0.0              A       NJ      = 9.8400000000E-01 -       NDS     = 8.2800000000E+00 -      
+VNDS    =-1.0900000000E+00 V       VDLIN   = 5.0000000000E-01 -       
+ * Dynamic bulk-diode related parameters *
+DCAPLEV = 5                -       CJGATE  = 3.7130674992E-10         CBD     = 0.0              F      
+CBS     = 0.0              F       CJ      = 8.4876821623E-04 F/m^2   CJSW    = 3.7130674992E-10 F/m    
+FC      = 0.0              -       MJ      = 5.0000000000E-01 -       MJSW    = 3.1500000000E-01 -      
+TT      = 5.3000000000E-09 s       PB      = 8.2261878381E-01 V       PBSW    = 8.1774847954E-01 V      
+ * Temperature related Parameters 
+EG      = 1.1600000000E+00 eV      GAP1    = 7.0200000000E-04 eV/degK GAP2    = 1.1080000000E+03 degK   
+TNOM    = 2.1000000000E+01 degC    TLEV    = 2                -       TLEVC   = 0                -      
+TLEVI   = 3                -       XTI     = 3.2000000000E+00 -       
+ * Temperature Access Resistance related parameters * TLEVR = 1 
+TRD1    = 0.0              1/degK  TRS1    = 0.0              1/degK  TRSH1   = 0.0              1/degK 
+TRD2    = 0.0              unit4   TRS2    = 0.0              unit4   TRSH2   = 0.0              unit4  
+
+unit1 represents m^2/V/sec
+unit2 represents V^-1.m^-2
+unit3 represents V^-1.m^2
+unit4 represents 1/degK^2
+
+
+Searching Operating Point between -4.500000E+00V and
+                                  9.000000E+00V
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:31******
+
+0AC response for 2-stage opamp with NMOS inputs
+
+0****     OPTION SUMMARY                     TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+
+
+*** DC Control Options : 
+
+GMIN           = 1.00e-12 NMAXSIZE       = 100000   ITL1           = 1000     
+GRAMP          = 0        NETSIZE        = 100      VMINDC         = UNDEF    
+VMAXDC         = UNDEF    
+
+*** Initial Accuracy Control Options (May be adjusted during simulation): 
+
+ITOL           = 1.00e-06 EPS            = 1.00e-06 VNTOL          = 1.00e-06 
+RELTOL         = 1.00e-04 RELERR         = 5.00e-02 PIVREL         = 1.00e-03 
+PIVTOL         = 1.00e-16 ABSTOL         = 1.00e-12 FLXTOL         = 1.00e-11 
+MAXORD         = 2.00e+00 
+
+*** Time-step Control Options : 
+
+ZOOMTIME       = 1.00e+00 STEP           = 0.00e+00 STARTSMP       = 0.00e+00 
+FREQSMP        = 0.00e+00 COURESOL       = 0.00e+00 TRTOL          = 7.00e+00 
+HMIN           = 1.00e-12 ITL3           = 3        ITL4           = 13       
+FT             = 1.25e-01 DCLOG          = 1.00e+00 LVLTIM         = 2        
+LVLCNV         = 2        DVDT           = -1       RELVAR         = 1.50e-01 
+ABSVAR         = 2.00e-01 SAMPLE         = 0.00e+00 HMAX           = UNDEF    
+
+
+*** MosFet default Options : 
+
+SCALE          = 1.00e+00 SCALM          = 1.00e+00 SCALEBSIM      = 1.00e+00 
+DEFAD          = UNDEF    DEFAS          = UNDEF    DEFPD          = UNDEF    
+DEFPS          = UNDEF    DEFW           = 1.00e-04 DEFL           = 1.00e-04 
+DEFNRD         = UNDEF    DEFNRS         = UNDEF    XA             = 6.00e-06 
+LIMRMOS        = UNDEF    SHRINK         = 1.00e+00 
+
+*** General Information Options : 
+
+TUNING         = ACCURATE 
+CPTIME         = UNDEF    STAT           = 0        TIMEDIV        = 0        
+SIMUDIV        = 10       SAVETIME       = 0        MAXTRAN        = 1000     
+MAXNODES       = 10000    MAXV           = 1.00e+13 LIMPROBE       = 10000    
+FLICKER_NOISE  = 0        THERMAL_NOISE  = 0        TNOM           = 2.70e+01 
+TMAX           = UNDEF    
+SPICDC         = 0        SPIOUT         = 0        NEWTON         = 1        
+OSR            = 0        TRAP           = 1        GEAR           = 0        
+BE             = 0        PROBEOP        = 0        NOLAT          = 0        
+NWLAT          = 0        ANALOG         = 0        BBDEBUG        = 0        
+NOSIZECHK      = 0        QTRUNC         = 0        UNBOUND        = 0        
+LCAPOP         = 1        NOAEX          = 1        AEX            = 1        
+AEX            = 1        STVER          = 0        MOTOROLA       = 0        
+AMS            = 0        ASPEC          = 0        INPUT          = 0        
+NOINIT         = 0        PSF            = 0        NOBIN          = 0        
+NOCOU          = 1        WL             = 0        NODE           = 0        
+LIST           = 0        SPI3BIN        = 0        SPI3ASC        = 0        
+NOMOD          = 0        NOBIN          = 0        NOCOU          = 1        
+RMOS           = 0        NWRMOS         = 1        NONWRMOS       = 0        
+USEDEFAP       = 0        NOASCII        = 1        ASCII          = 0        
+MIXED          = 0        SWITCH         = 0        USERSWITCH     = 0        
+TIMING         = 0        MODWL          = 1        ULOGIC         = 0        
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:31******
+
+0AC response for 2-stage opamp with NMOS inputs
+
+0****     CIRCUIT CHECKS SUMMARY             TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+
+---------| Summary of potential problems |---------
+
+This circuit contains some very small resistances values.
+1 occurrence(s)
+   Name of one of such device involved:    RF
+                                           value = 1.100000e-05
+Work-around applied: No
+You may consider .OPTION MINRESISTANCE = #
+
+---------------------------------------------------
+
+***> 25-Sep-2022 13:00:31 - ELABORATION completed: WALL CLOCK ELAPSED TIME 0s <***
+
+
+***> 25-Sep-2022 13:00:31 - STARTING SIMULATION PHASE ...
+
+***> 25-Sep-2022 13:00:31 - DC completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:31******
+
+0AC response for 2-stage opamp with NMOS inputs
+
+0****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+  NODE              VOLTAGE           NODE              VOLTAGE         
+IB25A              1.4105153898E+00 VDDA               4.5000000000E+00 
+VIN                2.4497091893E+00 VIP                2.4500000000E+00 
+VO                 2.4497091893E+00 VSSA               0.0              
+XI1.VD1            2.6674736158E+00 XI1.VD2            2.6614918226E+00 
+XI1.VRC            2.6614918226E+00 XI1.VT             8.3372027407E-01 
+
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT           VOLTAGE           POWER             
+VSSA       3.2377510657E-04  0.0               0.0              
+VDDA      -3.2377510657E-04  4.5000000000E+00 -1.4569879796E-03 
+IB25A      2.5000000000E-05  3.0894846102E+00  7.7237115255E-05 
+VS         0.0               2.4500000000E+00  0.0              
+
+   TOTAL POWER DISSIPATION:  1.3797508643E-03 WATTS
+
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:31******
+
+0AC response for 2-stage opamp with NMOS
+
+0****     OPERATING POINT INFORMATION      TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:31******
+
+0AC response for 2-stage opamp with NMOS inputs
+
+0****     CAPACITANCE INFORMATION            TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+Node VDDA
+  VDDA  C =  50.84109F 
+  XI1.VD1  C =  17.33472F 
+  XI1.VD2  C =  11.09501F 
+  VO  C =  4.72635F  
+  CFIX =  0.00000    CVAR  =  83.99717F    CTOT =  83.99717F 
+
+
+Node VIP
+  VSSA  C =  1.63911F  
+  XI1.VD2  C =  1.27630F  
+  XI1.VT  C =  7.43071F  
+  CFIX =  0.00000    CVAR  =  10.34612F    CTOT =  10.34612F 
+
+
+Node VSSA
+  VSSA  C =  336.97671F
+  IB25A  C =  271.39554F
+  XI1.VT  C =  48.43177F 
+  VO  C =  1.01445P  
+  VIP  C =  1.71034F  
+  VIN  C =  1.71034F  
+  XI1.VD1  C =  3.53931F  
+  XI1.VD2  C =  3.54135F  
+  CFIX =  1.00000P    CVAR  =  681.76012F   CTOT =  1.68176P  
+
+
+Node IB25A
+  VSSA  C =  376.22092F
+  IB25A  C =  11.26996F 
+  XI1.VT  C =  10.13805F 
+  VO  C =  5.06903F  
+  CFIX =  0.00000    CVAR  =  402.69796F   CTOT =  402.69796F
+
+
+Node VIN
+  VSSA  C =  1.63925F  
+  XI1.VD1  C =  1.27630F  
+  XI1.VT  C =  7.43058F  
+  CFIX =  0.00000    CVAR  =  10.34612F    CTOT =  10.34612F 
+
+
+Node XI1.VD1
+  VSSA  C =  4.15760F  
+  VIN  C =  3.71291F  
+  XI1.VT  C = -3.04669F  
+  VDDA  C =  19.52643F 
+  XI1.VD1  C =  5.45688F  
+  XI1.VD2  C =  1.63259F  
+  CFIX =  0.00000    CVAR  =  31.43972F    CTOT =  31.43972F 
+
+
+Node XI1.VD2
+  VIP  C =  3.71291F  
+  VSSA  C =  4.15968F  
+  XI1.VT  C = -3.04672F  
+  VDDA  C =  11.09501F 
+  XI1.VD1  C =  3.82429F  
+  VO  C =  1.63259F  
+  CFIX =  0.00000    CVAR  =  21.37776F    CTOT =  21.37776F 
+
+
+Node VO
+  VDDA  C =  2.53464F  
+  XI1.VD2  C =  3.82429F  
+  VSSA  C =  979.51298F
+  IB25A  C =  40.01082F 
+  XI1.VRC  C =  51.00000P 
+  CFIX =  52.00000P   CVAR  =  25.88273F    CTOT =  52.02588P 
+
+
+Node XI1.VT
+  VSSA  C = -22.54612F 
+  VIN  C =  4.92287F  
+  XI1.VD1  C =  8.21899A  
+  VIP  C =  4.92287F  
+  XI1.VD2  C =  8.21900A  
+  IB25A  C =  80.02164F 
+  CFIX =  0.00000    CVAR  =  67.33770F    CTOT =  67.33770F 
+
+
+Node XI1.VRC
+  VO  C =  51.00000P 
+  CFIX =  51.00000P   CVAR  =  0.00000     CTOT =  51.00000P 
+
+
+               XI1.M1            XI1.M2            XI1.M6            XI1.M7            XI1.M8            
+
+MODEL          CMOSN             CMOSN             CMOSN             CMOSN             CMOSN             
+MFACTOR         1.0000000000E+00  1.0000000000E+00  1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 
+ID              9.8651842722E-05  9.8701021885E-05  2.5000000000E-05  1.9735285054E-04  1.0142223951E-04 
+VGS             1.6159889152E+00  1.6162797259E+00  1.4105153898E+00  1.4105153898E+00  1.4105153898E+00 
+VDS             1.8337533417E+00  1.8277715485E+00  1.4105153898E+00  8.3372027407E-01  2.4497091893E+00 
+VBS            -8.3372027407E-01 -8.3372027407E-01  0.0               0.0               0.0              
+VTH             9.9007097117E-01  9.9008466892E-01  7.9108565678E-01  7.9108437091E-01  7.9108669095E-01 
+VDSAT           4.7836788660E-01  4.7855049626E-01  4.4354684181E-01  4.4354994490E-01  4.4354373730E-01 
+GM              2.6821799840E-04  2.6823316118E-04  7.5534344705E-05  5.9508864169E-04  3.0582718311E-04 
+GDS             4.7777358490E-06  4.7917897949E-06  4.3287612820E-07  6.5400250268E-06  1.1563251601E-06 
+RON             2.0930416239E+05  2.0869028960E+05  2.3101296996E+06  1.5290461365E+05  8.6480864946E+05 
+GMB             6.6710876997E-05  6.6718595463E-05  2.9555830270E-05  2.3300220441E-04  1.1958222573E-04 
+Cdd             4.8238234160E-15  4.8258701148E-15  5.3782190448E-15  4.6519119076E-14  1.9523796879E-14 
+Cdg            -3.7129094308E-15 -3.7129094366E-15 -1.0002705107E-14 -8.0021640868E-14 -4.0010820418E-14 
+Cds             3.0466857192E-15  3.0467214702E-15  1.2634926357E-14  1.0107991643E-13  5.0539279454E-14 
+Cdb            -4.1575997044E-15 -4.1596821483E-15 -8.0104402952E-15 -6.7577394639E-14 -3.0052255915E-14 
+Cgd            -1.2762980162E-15 -1.2762980056E-15 -1.2672565239E-15 -1.0138052200E-14 -5.0690260909E-15 
+Cgg             1.0346119325E-14  1.0346119287E-14  3.0563055341E-14  2.4450448516E-13  1.2225219857E-13 
+Cgs            -7.4305758251E-15 -7.4307085348E-15 -2.4309380050E-14 -1.9447642814E-13 -9.7236306618E-14 
+Cgb            -1.6392454835E-15 -1.6391127469E-15 -4.9864187674E-15 -3.9890004821E-14 -1.9946865858E-14 
+Csd            -8.2189916002E-18 -8.2189969046E-18 -1.0855738286E-20 -8.6841544382E-20 -4.3425296669E-20 
+Csg            -4.9228710380E-15 -4.9228710467E-15 -1.4370418382E-14 -1.1496334708E-13 -5.7481673516E-14 
+Css             1.0409263555E-14  1.0409316637E-14  2.5983072969E-14  2.0786544751E-13  1.0393161898E-13 
+Csb            -5.4781735250E-15 -5.4782265931E-15 -1.1612643732E-14 -9.2902013592E-14 -4.6449902037E-14 
+Cbd            -3.5393064082E-15 -3.5413531123E-15 -4.1109516651E-15 -3.6380980034E-14 -1.4454727363E-14 
+Cbg            -1.7103388560E-15 -1.7103388039E-15 -6.1899318526E-15 -4.9519497216E-14 -2.4759704632E-14 
+Cbs            -6.0253734487E-15 -6.0253295721E-15 -1.4308619276E-14 -1.1446893580E-13 -5.7234591814E-14 
+Cbb             1.1275018713E-14  1.1277021488E-14  2.4609502794E-14  2.0036941305E-13  9.6449023810E-14 
+PHI             8.4575842024E-01  8.4575842024E-01  8.4575842024E-01  8.4575842024E-01  8.4575842024E-01 
+VBI             1.0091491456E+00  1.0091491456E+00  1.0091491456E+00  1.0091491456E+00  1.0091491456E+00 
+Region         saturation        saturation        saturation        saturation        saturation        
+VTH_D           6.2591794408E-01  6.2619505701E-01  6.1942973302E-01  6.1943101889E-01  6.1942869884E-01 
+
+               XI1.M3            XI1.M4            XI1.M5            
+
+MODEL          CMOSP             CMOSP             CMOSP             
+MFACTOR         1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 
+ID             -9.8651842722E-05 -9.8701021885E-05 -1.0142224196E-04 
+VGS            -1.8325263842E+00 -1.8325263842E+00 -1.8385081774E+00 
+VDS            -1.8325263842E+00 -1.8385081774E+00 -2.0502908107E+00 
+VBS             0.0               0.0               0.0              
+VTH            -8.6445856569E-01 -8.6441989110E-01 -8.6305412485E-01 
+VDSAT          -8.3931141329E-01 -8.3934097799E-01 -8.4507426042E-01 
+GM              1.7030111907E-04  1.7038502015E-04  1.7383150986E-04 
+GDS             8.2521446122E-06  8.2368810754E-06  7.8234714209E-06 
+RON             1.2118061995E+05  1.2140517641E+05  1.2782049632E+05 
+GMB             4.7782683195E-05  4.7803908681E-05  4.8673375686E-05 
+Cdd             6.4958343692E-15  6.4918681291E-15  6.3589345836E-15 
+Cdg            -3.8242921208E-15 -3.8242921208E-15 -3.8242921209E-15 
+Cds             2.7816354650E-15  2.7815986682E-15  2.7802916156E-15 
+Cdb            -5.4531777135E-15 -5.4491746764E-15 -5.3149340784E-15 
+Cgd            -1.6325888345E-15 -1.6325888246E-15 -1.6325882782E-15 
+Cgg             1.0060030826E-14  1.0060030717E-14  1.0060024709E-14 
+Cgs            -7.4963682897E-15 -7.4962675622E-15 -7.4938045987E-15 
+Cgb            -9.3107370130E-16 -9.3117433015E-16 -9.3363183248E-16 
+Csd            -2.0951214742E-17 -2.0951220129E-17 -2.0951518193E-17 
+Csg            -4.8995691425E-15 -4.8995691425E-15 -4.8995691426E-15 
+Css             1.3291655460E-14  1.3291598282E-14  1.3289528029E-14 
+Csb            -8.3711351023E-15 -8.3710779195E-15 -8.3690073680E-15 
+Cbd            -4.8422943200E-15 -4.8383280843E-15 -4.7053947872E-15 
+Cbg            -1.3361695623E-15 -1.3361694537E-15 -1.3361634460E-15 
+Cbs            -8.5769226348E-15 -8.5769293880E-15 -8.5760150457E-15 
+Cbb             1.4755386517E-14  1.4751426926E-14  1.4617573279E-14 
+PHI             7.9562542838E-01  7.9562542838E-01  7.9562542838E-01 
+VBI             9.8474415957E-01  9.8474415957E-01  9.8474415957E-01 
+Region         saturation        saturation        saturation        
+VTH_D           9.6806781851E-01  9.6810649310E-01  9.7545405258E-01 
+
+               XI1.RC            RF                RS                
+V+              2.6614918226E+00  2.4497091893E+00  2.4497091893E+00 
+V-              2.6614918226E+00  2.4497091893E+00  0.0              
+ID              0.0               0.0               2.4497091893E-12 
+
+               XI1.CC            CL                
+V+              2.6614918226E+00  2.4497091893E+00 
+V-              2.4497091893E+00  0.0              
+ID              0.0               0.0              
+
+
+***> 25-Sep-2022 13:00:36 - AC completed: WALL CLOCK ELAPSED TIME 5s <***
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:31******
+
+0AC response for 2-stage opamp with NMOS inputs
+
+0****     EXTRACT INFORMATION                
+0****   TEMPERATURE =  8.5000000000E+01 Celsius
+0****   ALTER index 0
+
+0***********************************************************************
+
+
+
+  OASCALE       =  1.0000000000E+00   
+  ADC           =  5.1800855282E+01   
+  UGBW          =  7.4756499984E+05   
+  UGBW_PHASE    = -1.0822392737E+02   
+  PHASE_MARGIN  =  7.1776072627E+01   
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:31******
+
+0AC response for 2-stage opamp with NMOS inputs
+
+0****     ACCOUNTING INFORMATION             TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+
+
+
+-----------| Simulated Design Summary |------------
+
+Detail about objects and nodes simulated:
+Number of nodes                     26
+Number of intrinsic nodes           16
+Number of input signals             3
+Number of resistors                 3
+Number of floating capacitors       2
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           3
+Number of current sources           1
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       8
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  17
+Repartition per level of MOS
+  BSIM3V3 8
+Number of equations                 29
+Number of non-zero terms            181
+Percent Zeros                      78.48
+Number of Newton iterations         34
+Number of AC points                 91
+Evaluation of active devices        1632
+Virtual memory size (MB)            432
+Peak memory size (MB)      46
+---------------------------------------------------
+***>MESSAGE SUMMARY: 8 warnings, 1 note
+
+****************************************************
+
+1 .ALTER OPAMP SCALED BY 2X
+
+
+* Adding new lines...
+.PARAM OASCALE = 2
+
+End of file 
+
+*** DATE: 25-Sep-2022 13:00:36
+*** TITLE: OPAMP SCALED BY 2X
+
+TEMPERATURE : 85.000000 degrees C
+
+
+***> 25-Sep-2022 13:00:36 - DC completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:36******
+
+0OPAMP SCALED BY 2X
+
+0****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+  NODE              VOLTAGE           NODE              VOLTAGE         
+IB25A              1.4105153898E+00 VDDA               4.5000000000E+00 
+VIN                2.4497091893E+00 VIP                2.4500000000E+00 
+VO                 2.4497091893E+00 VSSA               0.0              
+XI1.VD1            2.6674736158E+00 XI1.VD2            2.6614918226E+00 
+XI1.VRC            2.6614918226E+00 XI1.VT             8.3372027407E-01 
+
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT           VOLTAGE           POWER             
+VSSA       3.2377510657E-04  0.0               0.0              
+VDDA      -3.2377510657E-04  4.5000000000E+00 -1.4569879796E-03 
+IB25A      2.5000000000E-05  3.0894846102E+00  7.7237115255E-05 
+VS         0.0               2.4500000000E+00  0.0              
+
+   TOTAL POWER DISSIPATION:  1.3797508643E-03 WATTS
+
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:36******
+
+0AC response for 2-stage opamp with NMOS
+
+0****     OPERATING POINT INFORMATION      TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:36******
+
+0OPAMP SCALED BY 2X
+
+0****     CAPACITANCE INFORMATION            TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+Node VDDA
+  VDDA  C =  50.84109F 
+  XI1.VD1  C =  17.33472F 
+  XI1.VD2  C =  11.09501F 
+  VO  C =  4.72635F  
+  CFIX =  0.00000    CVAR  =  83.99717F    CTOT =  83.99717F 
+
+
+Node VIP
+  VSSA  C =  1.63911F  
+  XI1.VD2  C =  1.27630F  
+  XI1.VT  C =  7.43071F  
+  CFIX =  0.00000    CVAR  =  10.34612F    CTOT =  10.34612F 
+
+
+Node VSSA
+  VSSA  C =  336.97671F
+  IB25A  C =  271.39554F
+  XI1.VT  C =  48.43177F 
+  VO  C =  2.01445P  
+  VIP  C =  1.71034F  
+  VIN  C =  1.71034F  
+  XI1.VD1  C =  3.53931F  
+  XI1.VD2  C =  3.54135F  
+  CFIX =  2.00000P    CVAR  =  681.76012F   CTOT =  2.68176P  
+
+
+Node IB25A
+  VSSA  C =  376.22092F
+  IB25A  C =  11.26996F 
+  XI1.VT  C =  10.13805F 
+  VO  C =  5.06903F  
+  CFIX =  0.00000    CVAR  =  402.69796F   CTOT =  402.69796F
+
+
+Node VIN
+  VSSA  C =  1.63925F  
+  XI1.VD1  C =  1.27630F  
+  XI1.VT  C =  7.43058F  
+  CFIX =  0.00000    CVAR  =  10.34612F    CTOT =  10.34612F 
+
+
+Node XI1.VD1
+  VSSA  C =  4.15760F  
+  VIN  C =  3.71291F  
+  XI1.VT  C = -3.04669F  
+  VDDA  C =  19.52643F 
+  XI1.VD1  C =  5.45688F  
+  XI1.VD2  C =  1.63259F  
+  CFIX =  0.00000    CVAR  =  31.43972F    CTOT =  31.43972F 
+
+
+Node XI1.VD2
+  VIP  C =  3.71291F  
+  VSSA  C =  4.15968F  
+  XI1.VT  C = -3.04672F  
+  VDDA  C =  11.09501F 
+  XI1.VD1  C =  3.82429F  
+  VO  C =  1.63259F  
+  CFIX =  0.00000    CVAR  =  21.37776F    CTOT =  21.37776F 
+
+
+Node VO
+  VDDA  C =  2.53464F  
+  XI1.VD2  C =  3.82429F  
+  VSSA  C =  1.97951P  
+  IB25A  C =  40.01082F 
+  XI1.VRC  C =  51.00000P 
+  CFIX =  53.00000P   CVAR  =  25.88273F    CTOT =  53.02588P 
+
+
+Node XI1.VT
+  VSSA  C = -22.54612F 
+  VIN  C =  4.92287F  
+  XI1.VD1  C =  8.21899A  
+  VIP  C =  4.92287F  
+  XI1.VD2  C =  8.21900A  
+  IB25A  C =  80.02164F 
+  CFIX =  0.00000    CVAR  =  67.33770F    CTOT =  67.33770F 
+
+
+Node XI1.VRC
+  VO  C =  51.00000P 
+  CFIX =  51.00000P   CVAR  =  0.00000     CTOT =  51.00000P 
+
+
+               XI1.M1            XI1.M2            XI1.M6            XI1.M7            XI1.M8            
+
+MODEL          CMOSN             CMOSN             CMOSN             CMOSN             CMOSN             
+MFACTOR         1.0000000000E+00  1.0000000000E+00  1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 
+ID              9.8651842722E-05  9.8701021885E-05  2.5000000000E-05  1.9735285054E-04  1.0142223951E-04 
+VGS             1.6159889152E+00  1.6162797259E+00  1.4105153898E+00  1.4105153898E+00  1.4105153898E+00 
+VDS             1.8337533417E+00  1.8277715485E+00  1.4105153898E+00  8.3372027407E-01  2.4497091893E+00 
+VBS            -8.3372027407E-01 -8.3372027407E-01  0.0               0.0               0.0              
+VTH             9.9007097117E-01  9.9008466892E-01  7.9108565678E-01  7.9108437091E-01  7.9108669095E-01 
+VDSAT           4.7836788660E-01  4.7855049626E-01  4.4354684181E-01  4.4354994490E-01  4.4354373730E-01 
+GM              2.6821799840E-04  2.6823316118E-04  7.5534344705E-05  5.9508864169E-04  3.0582718311E-04 
+GDS             4.7777358490E-06  4.7917897949E-06  4.3287612820E-07  6.5400250268E-06  1.1563251601E-06 
+RON             2.0930416239E+05  2.0869028960E+05  2.3101296996E+06  1.5290461365E+05  8.6480864946E+05 
+GMB             6.6710876997E-05  6.6718595463E-05  2.9555830270E-05  2.3300220441E-04  1.1958222573E-04 
+Cdd             4.8238234160E-15  4.8258701148E-15  5.3782190448E-15  4.6519119076E-14  1.9523796879E-14 
+Cdg            -3.7129094308E-15 -3.7129094366E-15 -1.0002705107E-14 -8.0021640868E-14 -4.0010820418E-14 
+Cds             3.0466857192E-15  3.0467214702E-15  1.2634926357E-14  1.0107991643E-13  5.0539279454E-14 
+Cdb            -4.1575997044E-15 -4.1596821483E-15 -8.0104402952E-15 -6.7577394639E-14 -3.0052255915E-14 
+Cgd            -1.2762980162E-15 -1.2762980056E-15 -1.2672565239E-15 -1.0138052200E-14 -5.0690260909E-15 
+Cgg             1.0346119325E-14  1.0346119287E-14  3.0563055341E-14  2.4450448516E-13  1.2225219857E-13 
+Cgs            -7.4305758251E-15 -7.4307085348E-15 -2.4309380050E-14 -1.9447642814E-13 -9.7236306618E-14 
+Cgb            -1.6392454835E-15 -1.6391127469E-15 -4.9864187674E-15 -3.9890004821E-14 -1.9946865858E-14 
+Csd            -8.2189916002E-18 -8.2189969046E-18 -1.0855738286E-20 -8.6841544382E-20 -4.3425296669E-20 
+Csg            -4.9228710380E-15 -4.9228710467E-15 -1.4370418382E-14 -1.1496334708E-13 -5.7481673516E-14 
+Css             1.0409263555E-14  1.0409316637E-14  2.5983072969E-14  2.0786544751E-13  1.0393161898E-13 
+Csb            -5.4781735250E-15 -5.4782265931E-15 -1.1612643732E-14 -9.2902013592E-14 -4.6449902037E-14 
+Cbd            -3.5393064082E-15 -3.5413531123E-15 -4.1109516651E-15 -3.6380980034E-14 -1.4454727363E-14 
+Cbg            -1.7103388560E-15 -1.7103388039E-15 -6.1899318526E-15 -4.9519497216E-14 -2.4759704632E-14 
+Cbs            -6.0253734487E-15 -6.0253295721E-15 -1.4308619276E-14 -1.1446893580E-13 -5.7234591814E-14 
+Cbb             1.1275018713E-14  1.1277021488E-14  2.4609502794E-14  2.0036941305E-13  9.6449023810E-14 
+PHI             8.4575842024E-01  8.4575842024E-01  8.4575842024E-01  8.4575842024E-01  8.4575842024E-01 
+VBI             1.0091491456E+00  1.0091491456E+00  1.0091491456E+00  1.0091491456E+00  1.0091491456E+00 
+Region         saturation        saturation        saturation        saturation        saturation        
+VTH_D           6.2591794408E-01  6.2619505701E-01  6.1942973302E-01  6.1943101889E-01  6.1942869884E-01 
+
+               XI1.M3            XI1.M4            XI1.M5            
+
+MODEL          CMOSP             CMOSP             CMOSP             
+MFACTOR         1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 
+ID             -9.8651842722E-05 -9.8701021885E-05 -1.0142224196E-04 
+VGS            -1.8325263842E+00 -1.8325263842E+00 -1.8385081774E+00 
+VDS            -1.8325263842E+00 -1.8385081774E+00 -2.0502908107E+00 
+VBS             0.0               0.0               0.0              
+VTH            -8.6445856569E-01 -8.6441989110E-01 -8.6305412485E-01 
+VDSAT          -8.3931141329E-01 -8.3934097799E-01 -8.4507426042E-01 
+GM              1.7030111907E-04  1.7038502015E-04  1.7383150986E-04 
+GDS             8.2521446122E-06  8.2368810754E-06  7.8234714209E-06 
+RON             1.2118061995E+05  1.2140517641E+05  1.2782049632E+05 
+GMB             4.7782683195E-05  4.7803908681E-05  4.8673375686E-05 
+Cdd             6.4958343692E-15  6.4918681291E-15  6.3589345836E-15 
+Cdg            -3.8242921208E-15 -3.8242921208E-15 -3.8242921209E-15 
+Cds             2.7816354650E-15  2.7815986682E-15  2.7802916156E-15 
+Cdb            -5.4531777135E-15 -5.4491746764E-15 -5.3149340784E-15 
+Cgd            -1.6325888345E-15 -1.6325888246E-15 -1.6325882782E-15 
+Cgg             1.0060030826E-14  1.0060030717E-14  1.0060024709E-14 
+Cgs            -7.4963682897E-15 -7.4962675622E-15 -7.4938045987E-15 
+Cgb            -9.3107370130E-16 -9.3117433015E-16 -9.3363183248E-16 
+Csd            -2.0951214742E-17 -2.0951220129E-17 -2.0951518193E-17 
+Csg            -4.8995691425E-15 -4.8995691425E-15 -4.8995691426E-15 
+Css             1.3291655460E-14  1.3291598282E-14  1.3289528029E-14 
+Csb            -8.3711351023E-15 -8.3710779195E-15 -8.3690073680E-15 
+Cbd            -4.8422943200E-15 -4.8383280843E-15 -4.7053947872E-15 
+Cbg            -1.3361695623E-15 -1.3361694537E-15 -1.3361634460E-15 
+Cbs            -8.5769226348E-15 -8.5769293880E-15 -8.5760150457E-15 
+Cbb             1.4755386517E-14  1.4751426926E-14  1.4617573279E-14 
+PHI             7.9562542838E-01  7.9562542838E-01  7.9562542838E-01 
+VBI             9.8474415957E-01  9.8474415957E-01  9.8474415957E-01 
+Region         saturation        saturation        saturation        
+VTH_D           9.6806781851E-01  9.6810649310E-01  9.7545405258E-01 
+
+               XI1.RC            RF                RS                
+V+              2.6614918226E+00  2.4497091893E+00  2.4497091893E+00 
+V-              2.6614918226E+00  2.4497091893E+00  0.0              
+ID              0.0               0.0               2.4497091893E-12 
+
+               XI1.CC            CL                
+V+              2.6614918226E+00  2.4497091893E+00 
+V-              2.4497091893E+00  0.0              
+ID              0.0               0.0              
+
+
+***> 25-Sep-2022 13:00:36 - AC completed: WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:36******
+
+0OPAMP SCALED BY 2X
+
+0****     EXTRACT INFORMATION                
+0****   TEMPERATURE =  8.5000000000E+01 Celsius
+0****   ALTER index 1    OPAMP SCALED BY 2X
+
+0***********************************************************************
+
+
+
+  OASCALE       =  2.0000000000E+00   
+  ADC           =  5.1800855279E+01   
+  UGBW          =  7.4586204815E+05   
+  UGBW_PHASE    = -1.0962834114E+02   
+  PHASE_MARGIN  =  7.0371658860E+01   
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:36******
+
+0OPAMP SCALED BY 2X
+
+0****     ACCOUNTING INFORMATION             TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+
+
+
+-----------| Simulated Design Summary |------------
+
+Detail about objects and nodes simulated:
+Number of nodes                     26
+Number of intrinsic nodes           16
+Number of input signals             3
+Number of resistors                 3
+Number of floating capacitors       2
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           3
+Number of current sources           1
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       8
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  17
+Repartition per level of MOS
+  BSIM3V3 8
+Number of equations                 29
+Number of non-zero terms            181
+Percent Zeros                      78.48
+Number of Newton iterations         1
+Number of AC points                 91
+Evaluation of active devices        47
+Virtual memory size (MB)            433
+Peak memory size (MB)      46
+---------------------------------------------------
+***>MESSAGE SUMMARY: 8 warnings
+
+****************************************************
+
+2 .ALTER OPAMP SCALED BY 4X
+
+
+* Adding new lines...
+.PARAM OASCALE = 4
+
+End of file 
+
+*** DATE: 25-Sep-2022 13:00:36
+*** TITLE: OPAMP SCALED BY 4X
+
+TEMPERATURE : 85.000000 degrees C
+
+
+***> 25-Sep-2022 13:00:36 - DC completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:36******
+
+0OPAMP SCALED BY 4X
+
+0****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+  NODE              VOLTAGE           NODE              VOLTAGE         
+IB25A              1.4105153898E+00 VDDA               4.5000000000E+00 
+VIN                2.4497091893E+00 VIP                2.4500000000E+00 
+VO                 2.4497091893E+00 VSSA               0.0              
+XI1.VD1            2.6674736158E+00 XI1.VD2            2.6614918226E+00 
+XI1.VRC            2.6614918226E+00 XI1.VT             8.3372027407E-01 
+
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT           VOLTAGE           POWER             
+VSSA       3.2377510657E-04  0.0               0.0              
+VDDA      -3.2377510657E-04  4.5000000000E+00 -1.4569879796E-03 
+IB25A      2.5000000000E-05  3.0894846102E+00  7.7237115255E-05 
+VS         0.0               2.4500000000E+00  0.0              
+
+   TOTAL POWER DISSIPATION:  1.3797508643E-03 WATTS
+
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:36******
+
+0AC response for 2-stage opamp with NMOS
+
+0****     OPERATING POINT INFORMATION      TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:36******
+
+0OPAMP SCALED BY 4X
+
+0****     CAPACITANCE INFORMATION            TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+Node VDDA
+  VDDA  C =  50.84109F 
+  XI1.VD1  C =  17.33472F 
+  XI1.VD2  C =  11.09501F 
+  VO  C =  4.72635F  
+  CFIX =  0.00000    CVAR  =  83.99717F    CTOT =  83.99717F 
+
+
+Node VIP
+  VSSA  C =  1.63911F  
+  XI1.VD2  C =  1.27630F  
+  XI1.VT  C =  7.43071F  
+  CFIX =  0.00000    CVAR  =  10.34612F    CTOT =  10.34612F 
+
+
+Node VSSA
+  VSSA  C =  336.97671F
+  IB25A  C =  271.39554F
+  XI1.VT  C =  48.43177F 
+  VO  C =  4.01445P  
+  VIP  C =  1.71034F  
+  VIN  C =  1.71034F  
+  XI1.VD1  C =  3.53931F  
+  XI1.VD2  C =  3.54135F  
+  CFIX =  4.00000P    CVAR  =  681.76012F   CTOT =  4.68176P  
+
+
+Node IB25A
+  VSSA  C =  376.22092F
+  IB25A  C =  11.26996F 
+  XI1.VT  C =  10.13805F 
+  VO  C =  5.06903F  
+  CFIX =  0.00000    CVAR  =  402.69796F   CTOT =  402.69796F
+
+
+Node VIN
+  VSSA  C =  1.63925F  
+  XI1.VD1  C =  1.27630F  
+  XI1.VT  C =  7.43058F  
+  CFIX =  0.00000    CVAR  =  10.34612F    CTOT =  10.34612F 
+
+
+Node XI1.VD1
+  VSSA  C =  4.15760F  
+  VIN  C =  3.71291F  
+  XI1.VT  C = -3.04669F  
+  VDDA  C =  19.52643F 
+  XI1.VD1  C =  5.45688F  
+  XI1.VD2  C =  1.63259F  
+  CFIX =  0.00000    CVAR  =  31.43972F    CTOT =  31.43972F 
+
+
+Node XI1.VD2
+  VIP  C =  3.71291F  
+  VSSA  C =  4.15968F  
+  XI1.VT  C = -3.04672F  
+  VDDA  C =  11.09501F 
+  XI1.VD1  C =  3.82429F  
+  VO  C =  1.63259F  
+  CFIX =  0.00000    CVAR  =  21.37776F    CTOT =  21.37776F 
+
+
+Node VO
+  VDDA  C =  2.53464F  
+  XI1.VD2  C =  3.82429F  
+  VSSA  C =  3.97951P  
+  IB25A  C =  40.01082F 
+  XI1.VRC  C =  51.00000P 
+  CFIX =  55.00000P   CVAR  =  25.88273F    CTOT =  55.02588P 
+
+
+Node XI1.VT
+  VSSA  C = -22.54612F 
+  VIN  C =  4.92287F  
+  XI1.VD1  C =  8.21899A  
+  VIP  C =  4.92287F  
+  XI1.VD2  C =  8.21900A  
+  IB25A  C =  80.02164F 
+  CFIX =  0.00000    CVAR  =  67.33770F    CTOT =  67.33770F 
+
+
+Node XI1.VRC
+  VO  C =  51.00000P 
+  CFIX =  51.00000P   CVAR  =  0.00000     CTOT =  51.00000P 
+
+
+               XI1.M1            XI1.M2            XI1.M6            XI1.M7            XI1.M8            
+
+MODEL          CMOSN             CMOSN             CMOSN             CMOSN             CMOSN             
+MFACTOR         1.0000000000E+00  1.0000000000E+00  1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 
+ID              9.8651842722E-05  9.8701021885E-05  2.5000000000E-05  1.9735285054E-04  1.0142223951E-04 
+VGS             1.6159889152E+00  1.6162797259E+00  1.4105153898E+00  1.4105153898E+00  1.4105153898E+00 
+VDS             1.8337533417E+00  1.8277715485E+00  1.4105153898E+00  8.3372027407E-01  2.4497091893E+00 
+VBS            -8.3372027407E-01 -8.3372027407E-01  0.0               0.0               0.0              
+VTH             9.9007097117E-01  9.9008466892E-01  7.9108565678E-01  7.9108437091E-01  7.9108669095E-01 
+VDSAT           4.7836788660E-01  4.7855049626E-01  4.4354684181E-01  4.4354994490E-01  4.4354373730E-01 
+GM              2.6821799840E-04  2.6823316118E-04  7.5534344705E-05  5.9508864169E-04  3.0582718311E-04 
+GDS             4.7777358490E-06  4.7917897949E-06  4.3287612820E-07  6.5400250268E-06  1.1563251601E-06 
+RON             2.0930416239E+05  2.0869028960E+05  2.3101296996E+06  1.5290461365E+05  8.6480864946E+05 
+GMB             6.6710876997E-05  6.6718595463E-05  2.9555830270E-05  2.3300220441E-04  1.1958222573E-04 
+Cdd             4.8238234160E-15  4.8258701148E-15  5.3782190448E-15  4.6519119076E-14  1.9523796879E-14 
+Cdg            -3.7129094308E-15 -3.7129094366E-15 -1.0002705107E-14 -8.0021640868E-14 -4.0010820418E-14 
+Cds             3.0466857192E-15  3.0467214702E-15  1.2634926357E-14  1.0107991643E-13  5.0539279454E-14 
+Cdb            -4.1575997044E-15 -4.1596821483E-15 -8.0104402952E-15 -6.7577394639E-14 -3.0052255915E-14 
+Cgd            -1.2762980162E-15 -1.2762980056E-15 -1.2672565239E-15 -1.0138052200E-14 -5.0690260909E-15 
+Cgg             1.0346119325E-14  1.0346119287E-14  3.0563055341E-14  2.4450448516E-13  1.2225219857E-13 
+Cgs            -7.4305758251E-15 -7.4307085348E-15 -2.4309380050E-14 -1.9447642814E-13 -9.7236306618E-14 
+Cgb            -1.6392454835E-15 -1.6391127469E-15 -4.9864187674E-15 -3.9890004821E-14 -1.9946865858E-14 
+Csd            -8.2189916002E-18 -8.2189969046E-18 -1.0855738286E-20 -8.6841544382E-20 -4.3425296669E-20 
+Csg            -4.9228710380E-15 -4.9228710467E-15 -1.4370418382E-14 -1.1496334708E-13 -5.7481673516E-14 
+Css             1.0409263555E-14  1.0409316637E-14  2.5983072969E-14  2.0786544751E-13  1.0393161898E-13 
+Csb            -5.4781735250E-15 -5.4782265931E-15 -1.1612643732E-14 -9.2902013592E-14 -4.6449902037E-14 
+Cbd            -3.5393064082E-15 -3.5413531123E-15 -4.1109516651E-15 -3.6380980034E-14 -1.4454727363E-14 
+Cbg            -1.7103388560E-15 -1.7103388039E-15 -6.1899318526E-15 -4.9519497216E-14 -2.4759704632E-14 
+Cbs            -6.0253734487E-15 -6.0253295721E-15 -1.4308619276E-14 -1.1446893580E-13 -5.7234591814E-14 
+Cbb             1.1275018713E-14  1.1277021488E-14  2.4609502794E-14  2.0036941305E-13  9.6449023810E-14 
+PHI             8.4575842024E-01  8.4575842024E-01  8.4575842024E-01  8.4575842024E-01  8.4575842024E-01 
+VBI             1.0091491456E+00  1.0091491456E+00  1.0091491456E+00  1.0091491456E+00  1.0091491456E+00 
+Region         saturation        saturation        saturation        saturation        saturation        
+VTH_D           6.2591794408E-01  6.2619505701E-01  6.1942973302E-01  6.1943101889E-01  6.1942869884E-01 
+
+               XI1.M3            XI1.M4            XI1.M5            
+
+MODEL          CMOSP             CMOSP             CMOSP             
+MFACTOR         1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 
+ID             -9.8651842722E-05 -9.8701021885E-05 -1.0142224196E-04 
+VGS            -1.8325263842E+00 -1.8325263842E+00 -1.8385081774E+00 
+VDS            -1.8325263842E+00 -1.8385081774E+00 -2.0502908107E+00 
+VBS             0.0               0.0               0.0              
+VTH            -8.6445856569E-01 -8.6441989110E-01 -8.6305412485E-01 
+VDSAT          -8.3931141329E-01 -8.3934097799E-01 -8.4507426042E-01 
+GM              1.7030111907E-04  1.7038502015E-04  1.7383150986E-04 
+GDS             8.2521446122E-06  8.2368810754E-06  7.8234714209E-06 
+RON             1.2118061995E+05  1.2140517641E+05  1.2782049632E+05 
+GMB             4.7782683195E-05  4.7803908681E-05  4.8673375686E-05 
+Cdd             6.4958343692E-15  6.4918681291E-15  6.3589345836E-15 
+Cdg            -3.8242921208E-15 -3.8242921208E-15 -3.8242921209E-15 
+Cds             2.7816354650E-15  2.7815986682E-15  2.7802916156E-15 
+Cdb            -5.4531777135E-15 -5.4491746764E-15 -5.3149340784E-15 
+Cgd            -1.6325888345E-15 -1.6325888246E-15 -1.6325882782E-15 
+Cgg             1.0060030826E-14  1.0060030717E-14  1.0060024709E-14 
+Cgs            -7.4963682897E-15 -7.4962675622E-15 -7.4938045987E-15 
+Cgb            -9.3107370130E-16 -9.3117433015E-16 -9.3363183248E-16 
+Csd            -2.0951214742E-17 -2.0951220129E-17 -2.0951518193E-17 
+Csg            -4.8995691425E-15 -4.8995691425E-15 -4.8995691426E-15 
+Css             1.3291655460E-14  1.3291598282E-14  1.3289528029E-14 
+Csb            -8.3711351023E-15 -8.3710779195E-15 -8.3690073680E-15 
+Cbd            -4.8422943200E-15 -4.8383280843E-15 -4.7053947872E-15 
+Cbg            -1.3361695623E-15 -1.3361694537E-15 -1.3361634460E-15 
+Cbs            -8.5769226348E-15 -8.5769293880E-15 -8.5760150457E-15 
+Cbb             1.4755386517E-14  1.4751426926E-14  1.4617573279E-14 
+PHI             7.9562542838E-01  7.9562542838E-01  7.9562542838E-01 
+VBI             9.8474415957E-01  9.8474415957E-01  9.8474415957E-01 
+Region         saturation        saturation        saturation        
+VTH_D           9.6806781851E-01  9.6810649310E-01  9.7545405258E-01 
+
+               XI1.RC            RF                RS                
+V+              2.6614918226E+00  2.4497091893E+00  2.4497091893E+00 
+V-              2.6614918226E+00  2.4497091893E+00  0.0              
+ID              0.0               0.0               2.4497091893E-12 
+
+               XI1.CC            CL                
+V+              2.6614918226E+00  2.4497091893E+00 
+V-              2.4497091893E+00  0.0              
+ID              0.0               0.0              
+
+
+***> 25-Sep-2022 13:00:37 - AC completed: WALL CLOCK ELAPSED TIME 1s <***
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:36******
+
+0OPAMP SCALED BY 4X
+
+0****     EXTRACT INFORMATION                
+0****   TEMPERATURE =  8.5000000000E+01 Celsius
+0****   ALTER index 2    OPAMP SCALED BY 4X
+
+0***********************************************************************
+
+
+
+  OASCALE       =  4.0000000000E+00   
+  ADC           =  5.1800855273E+01   
+  UGBW          =  7.4105267738E+05   
+  UGBW_PHASE    = -1.1235248416E+02   
+  PHASE_MARGIN  =  6.7647515843E+01   
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:36******
+
+0OPAMP SCALED BY 4X
+
+0****     ACCOUNTING INFORMATION             TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+
+
+
+-----------| Simulated Design Summary |------------
+
+Detail about objects and nodes simulated:
+Number of nodes                     26
+Number of intrinsic nodes           16
+Number of input signals             3
+Number of resistors                 3
+Number of floating capacitors       2
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           3
+Number of current sources           1
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       8
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  17
+Repartition per level of MOS
+  BSIM3V3 8
+Number of equations                 29
+Number of non-zero terms            181
+Percent Zeros                      78.48
+Number of Newton iterations         32
+Number of AC points                 91
+Evaluation of active devices        1707
+Virtual memory size (MB)            433
+Peak memory size (MB)      46
+---------------------------------------------------
+***>MESSAGE SUMMARY: 8 warnings
+
+****************************************************
+
+3 .ALTER OPAMP SCALED BY 8X
+
+
+* Adding new lines...
+.PARAM OASCALE = 8
+
+End of file 
+
+*** DATE: 25-Sep-2022 13:00:37
+*** TITLE: OPAMP SCALED BY 8X
+
+TEMPERATURE : 85.000000 degrees C
+
+
+***> 25-Sep-2022 13:00:37 - DC completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:37******
+
+0OPAMP SCALED BY 8X
+
+0****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+  NODE              VOLTAGE           NODE              VOLTAGE         
+IB25A              1.4105153898E+00 VDDA               4.5000000000E+00 
+VIN                2.4497091893E+00 VIP                2.4500000000E+00 
+VO                 2.4497091893E+00 VSSA               0.0              
+XI1.VD1            2.6674736158E+00 XI1.VD2            2.6614918226E+00 
+XI1.VRC            2.6614918226E+00 XI1.VT             8.3372027407E-01 
+
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT           VOLTAGE           POWER             
+VSSA       3.2377510657E-04  0.0               0.0              
+VDDA      -3.2377510657E-04  4.5000000000E+00 -1.4569879796E-03 
+IB25A      2.5000000000E-05  3.0894846102E+00  7.7237115255E-05 
+VS         0.0               2.4500000000E+00  0.0              
+
+   TOTAL POWER DISSIPATION:  1.3797508643E-03 WATTS
+
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:37******
+
+0AC response for 2-stage opamp with NMOS
+
+0****     OPERATING POINT INFORMATION      TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:37******
+
+0OPAMP SCALED BY 8X
+
+0****     CAPACITANCE INFORMATION            TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+Node VDDA
+  VDDA  C =  50.84109F 
+  XI1.VD1  C =  17.33472F 
+  XI1.VD2  C =  11.09501F 
+  VO  C =  4.72635F  
+  CFIX =  0.00000    CVAR  =  83.99717F    CTOT =  83.99717F 
+
+
+Node VIP
+  VSSA  C =  1.63911F  
+  XI1.VD2  C =  1.27630F  
+  XI1.VT  C =  7.43071F  
+  CFIX =  0.00000    CVAR  =  10.34612F    CTOT =  10.34612F 
+
+
+Node VSSA
+  VSSA  C =  336.97671F
+  IB25A  C =  271.39554F
+  XI1.VT  C =  48.43177F 
+  VO  C =  8.01445P  
+  VIP  C =  1.71034F  
+  VIN  C =  1.71034F  
+  XI1.VD1  C =  3.53931F  
+  XI1.VD2  C =  3.54135F  
+  CFIX =  8.00000P    CVAR  =  681.76012F   CTOT =  8.68176P  
+
+
+Node IB25A
+  VSSA  C =  376.22092F
+  IB25A  C =  11.26996F 
+  XI1.VT  C =  10.13805F 
+  VO  C =  5.06903F  
+  CFIX =  0.00000    CVAR  =  402.69796F   CTOT =  402.69796F
+
+
+Node VIN
+  VSSA  C =  1.63925F  
+  XI1.VD1  C =  1.27630F  
+  XI1.VT  C =  7.43058F  
+  CFIX =  0.00000    CVAR  =  10.34612F    CTOT =  10.34612F 
+
+
+Node XI1.VD1
+  VSSA  C =  4.15760F  
+  VIN  C =  3.71291F  
+  XI1.VT  C = -3.04669F  
+  VDDA  C =  19.52643F 
+  XI1.VD1  C =  5.45688F  
+  XI1.VD2  C =  1.63259F  
+  CFIX =  0.00000    CVAR  =  31.43972F    CTOT =  31.43972F 
+
+
+Node XI1.VD2
+  VIP  C =  3.71291F  
+  VSSA  C =  4.15968F  
+  XI1.VT  C = -3.04672F  
+  VDDA  C =  11.09501F 
+  XI1.VD1  C =  3.82429F  
+  VO  C =  1.63259F  
+  CFIX =  0.00000    CVAR  =  21.37776F    CTOT =  21.37776F 
+
+
+Node VO
+  VDDA  C =  2.53464F  
+  XI1.VD2  C =  3.82429F  
+  VSSA  C =  7.97951P  
+  IB25A  C =  40.01082F 
+  XI1.VRC  C =  51.00000P 
+  CFIX =  59.00000P   CVAR  =  25.88273F    CTOT =  59.02588P 
+
+
+Node XI1.VT
+  VSSA  C = -22.54612F 
+  VIN  C =  4.92287F  
+  XI1.VD1  C =  8.21899A  
+  VIP  C =  4.92287F  
+  XI1.VD2  C =  8.21900A  
+  IB25A  C =  80.02164F 
+  CFIX =  0.00000    CVAR  =  67.33770F    CTOT =  67.33770F 
+
+
+Node XI1.VRC
+  VO  C =  51.00000P 
+  CFIX =  51.00000P   CVAR  =  0.00000     CTOT =  51.00000P 
+
+
+               XI1.M1            XI1.M2            XI1.M6            XI1.M7            XI1.M8            
+
+MODEL          CMOSN             CMOSN             CMOSN             CMOSN             CMOSN             
+MFACTOR         1.0000000000E+00  1.0000000000E+00  1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 
+ID              9.8651842722E-05  9.8701021885E-05  2.5000000000E-05  1.9735285054E-04  1.0142223951E-04 
+VGS             1.6159889152E+00  1.6162797259E+00  1.4105153898E+00  1.4105153898E+00  1.4105153898E+00 
+VDS             1.8337533417E+00  1.8277715485E+00  1.4105153898E+00  8.3372027407E-01  2.4497091893E+00 
+VBS            -8.3372027407E-01 -8.3372027407E-01  0.0               0.0               0.0              
+VTH             9.9007097117E-01  9.9008466892E-01  7.9108565678E-01  7.9108437091E-01  7.9108669095E-01 
+VDSAT           4.7836788660E-01  4.7855049626E-01  4.4354684181E-01  4.4354994490E-01  4.4354373730E-01 
+GM              2.6821799840E-04  2.6823316118E-04  7.5534344705E-05  5.9508864169E-04  3.0582718311E-04 
+GDS             4.7777358490E-06  4.7917897949E-06  4.3287612820E-07  6.5400250268E-06  1.1563251601E-06 
+RON             2.0930416239E+05  2.0869028960E+05  2.3101296996E+06  1.5290461365E+05  8.6480864946E+05 
+GMB             6.6710876997E-05  6.6718595463E-05  2.9555830270E-05  2.3300220441E-04  1.1958222573E-04 
+Cdd             4.8238234160E-15  4.8258701148E-15  5.3782190448E-15  4.6519119076E-14  1.9523796879E-14 
+Cdg            -3.7129094308E-15 -3.7129094366E-15 -1.0002705107E-14 -8.0021640868E-14 -4.0010820418E-14 
+Cds             3.0466857192E-15  3.0467214702E-15  1.2634926357E-14  1.0107991643E-13  5.0539279454E-14 
+Cdb            -4.1575997044E-15 -4.1596821483E-15 -8.0104402952E-15 -6.7577394639E-14 -3.0052255915E-14 
+Cgd            -1.2762980162E-15 -1.2762980056E-15 -1.2672565239E-15 -1.0138052200E-14 -5.0690260909E-15 
+Cgg             1.0346119325E-14  1.0346119287E-14  3.0563055341E-14  2.4450448516E-13  1.2225219857E-13 
+Cgs            -7.4305758251E-15 -7.4307085348E-15 -2.4309380050E-14 -1.9447642814E-13 -9.7236306618E-14 
+Cgb            -1.6392454835E-15 -1.6391127469E-15 -4.9864187674E-15 -3.9890004821E-14 -1.9946865858E-14 
+Csd            -8.2189916002E-18 -8.2189969046E-18 -1.0855738286E-20 -8.6841544382E-20 -4.3425296669E-20 
+Csg            -4.9228710380E-15 -4.9228710467E-15 -1.4370418382E-14 -1.1496334708E-13 -5.7481673516E-14 
+Css             1.0409263555E-14  1.0409316637E-14  2.5983072969E-14  2.0786544751E-13  1.0393161898E-13 
+Csb            -5.4781735250E-15 -5.4782265931E-15 -1.1612643732E-14 -9.2902013592E-14 -4.6449902037E-14 
+Cbd            -3.5393064082E-15 -3.5413531123E-15 -4.1109516651E-15 -3.6380980034E-14 -1.4454727363E-14 
+Cbg            -1.7103388560E-15 -1.7103388039E-15 -6.1899318526E-15 -4.9519497216E-14 -2.4759704632E-14 
+Cbs            -6.0253734487E-15 -6.0253295721E-15 -1.4308619276E-14 -1.1446893580E-13 -5.7234591814E-14 
+Cbb             1.1275018713E-14  1.1277021488E-14  2.4609502794E-14  2.0036941305E-13  9.6449023810E-14 
+PHI             8.4575842024E-01  8.4575842024E-01  8.4575842024E-01  8.4575842024E-01  8.4575842024E-01 
+VBI             1.0091491456E+00  1.0091491456E+00  1.0091491456E+00  1.0091491456E+00  1.0091491456E+00 
+Region         saturation        saturation        saturation        saturation        saturation        
+VTH_D           6.2591794408E-01  6.2619505701E-01  6.1942973302E-01  6.1943101889E-01  6.1942869884E-01 
+
+               XI1.M3            XI1.M4            XI1.M5            
+
+MODEL          CMOSP             CMOSP             CMOSP             
+MFACTOR         1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 
+ID             -9.8651842722E-05 -9.8701021885E-05 -1.0142224196E-04 
+VGS            -1.8325263842E+00 -1.8325263842E+00 -1.8385081774E+00 
+VDS            -1.8325263842E+00 -1.8385081774E+00 -2.0502908107E+00 
+VBS             0.0               0.0               0.0              
+VTH            -8.6445856569E-01 -8.6441989110E-01 -8.6305412485E-01 
+VDSAT          -8.3931141329E-01 -8.3934097799E-01 -8.4507426042E-01 
+GM              1.7030111907E-04  1.7038502015E-04  1.7383150986E-04 
+GDS             8.2521446122E-06  8.2368810754E-06  7.8234714209E-06 
+RON             1.2118061995E+05  1.2140517641E+05  1.2782049632E+05 
+GMB             4.7782683195E-05  4.7803908681E-05  4.8673375686E-05 
+Cdd             6.4958343692E-15  6.4918681291E-15  6.3589345836E-15 
+Cdg            -3.8242921208E-15 -3.8242921208E-15 -3.8242921209E-15 
+Cds             2.7816354650E-15  2.7815986682E-15  2.7802916156E-15 
+Cdb            -5.4531777135E-15 -5.4491746764E-15 -5.3149340784E-15 
+Cgd            -1.6325888345E-15 -1.6325888246E-15 -1.6325882782E-15 
+Cgg             1.0060030826E-14  1.0060030717E-14  1.0060024709E-14 
+Cgs            -7.4963682897E-15 -7.4962675622E-15 -7.4938045987E-15 
+Cgb            -9.3107370130E-16 -9.3117433015E-16 -9.3363183248E-16 
+Csd            -2.0951214742E-17 -2.0951220129E-17 -2.0951518193E-17 
+Csg            -4.8995691425E-15 -4.8995691425E-15 -4.8995691426E-15 
+Css             1.3291655460E-14  1.3291598282E-14  1.3289528029E-14 
+Csb            -8.3711351023E-15 -8.3710779195E-15 -8.3690073680E-15 
+Cbd            -4.8422943200E-15 -4.8383280843E-15 -4.7053947872E-15 
+Cbg            -1.3361695623E-15 -1.3361694537E-15 -1.3361634460E-15 
+Cbs            -8.5769226348E-15 -8.5769293880E-15 -8.5760150457E-15 
+Cbb             1.4755386517E-14  1.4751426926E-14  1.4617573279E-14 
+PHI             7.9562542838E-01  7.9562542838E-01  7.9562542838E-01 
+VBI             9.8474415957E-01  9.8474415957E-01  9.8474415957E-01 
+Region         saturation        saturation        saturation        
+VTH_D           9.6806781851E-01  9.6810649310E-01  9.7545405258E-01 
+
+               XI1.RC            RF                RS                
+V+              2.6614918226E+00  2.4497091893E+00  2.4497091893E+00 
+V-              2.6614918226E+00  2.4497091893E+00  0.0              
+ID              0.0               0.0               2.4497091893E-12 
+
+               XI1.CC            CL                
+V+              2.6614918226E+00  2.4497091893E+00 
+V-              2.4497091893E+00  0.0              
+ID              0.0               0.0              
+
+
+***> 25-Sep-2022 13:00:37 - AC completed: WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:37******
+
+0OPAMP SCALED BY 8X
+
+0****     EXTRACT INFORMATION                
+0****   TEMPERATURE =  8.5000000000E+01 Celsius
+0****   ALTER index 3    OPAMP SCALED BY 8X
+
+0***********************************************************************
+
+
+
+  OASCALE       =  8.0000000000E+00   
+  ADC           =  5.1800855260E+01   
+  UGBW          =  7.2653037581E+05   
+  UGBW_PHASE    = -1.1737468642E+02   
+  PHASE_MARGIN  =  6.2625313582E+01   
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:37******
+
+0OPAMP SCALED BY 8X
+
+0****     ACCOUNTING INFORMATION             TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+
+
+
+-----------| Simulated Design Summary |------------
+
+Detail about objects and nodes simulated:
+Number of nodes                     26
+Number of intrinsic nodes           16
+Number of input signals             3
+Number of resistors                 3
+Number of floating capacitors       2
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           3
+Number of current sources           1
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       8
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  17
+Repartition per level of MOS
+  BSIM3V3 8
+Number of equations                 29
+Number of non-zero terms            181
+Percent Zeros                      78.48
+Number of Newton iterations         1
+Number of AC points                 91
+Evaluation of active devices        47
+Virtual memory size (MB)            433
+Peak memory size (MB)      46
+---------------------------------------------------
+***>MESSAGE SUMMARY: 8 warnings
+
+****************************************************
+
+4 .ALTER OPAMP SCALED BY 16X
+
+
+* Adding new lines...
+.PARAM OASCALE = 16
+
+End of file 
+
+*** DATE: 25-Sep-2022 13:00:37
+*** TITLE: OPAMP SCALED BY 16X
+
+TEMPERATURE : 85.000000 degrees C
+
+
+***> 25-Sep-2022 13:00:37 - DC completed: TOTAL WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:37******
+
+0OPAMP SCALED BY 16X
+
+0****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+  NODE              VOLTAGE           NODE              VOLTAGE         
+IB25A              1.4105153898E+00 VDDA               4.5000000000E+00 
+VIN                2.4497091893E+00 VIP                2.4500000000E+00 
+VO                 2.4497091893E+00 VSSA               0.0              
+XI1.VD1            2.6674736158E+00 XI1.VD2            2.6614918226E+00 
+XI1.VRC            2.6614918226E+00 XI1.VT             8.3372027407E-01 
+
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT           VOLTAGE           POWER             
+VSSA       3.2377510657E-04  0.0               0.0              
+VDDA      -3.2377510657E-04  4.5000000000E+00 -1.4569879796E-03 
+IB25A      2.5000000000E-05  3.0894846102E+00  7.7237115255E-05 
+VS         0.0               2.4500000000E+00  0.0              
+
+   TOTAL POWER DISSIPATION:  1.3797508643E-03 WATTS
+
+
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:37******
+
+0AC response for 2-stage opamp with NMOS
+
+0****     OPERATING POINT INFORMATION      TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:37******
+
+0OPAMP SCALED BY 16X
+
+0****     CAPACITANCE INFORMATION            TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+Node VDDA
+  VDDA  C =  50.84109F 
+  XI1.VD1  C =  17.33472F 
+  XI1.VD2  C =  11.09501F 
+  VO  C =  4.72635F  
+  CFIX =  0.00000    CVAR  =  83.99717F    CTOT =  83.99717F 
+
+
+Node VIP
+  VSSA  C =  1.63911F  
+  XI1.VD2  C =  1.27630F  
+  XI1.VT  C =  7.43071F  
+  CFIX =  0.00000    CVAR  =  10.34612F    CTOT =  10.34612F 
+
+
+Node VSSA
+  VSSA  C =  336.97671F
+  IB25A  C =  271.39554F
+  XI1.VT  C =  48.43177F 
+  VO  C =  16.01445P 
+  VIP  C =  1.71034F  
+  VIN  C =  1.71034F  
+  XI1.VD1  C =  3.53931F  
+  XI1.VD2  C =  3.54135F  
+  CFIX =  16.00000P   CVAR  =  681.76012F   CTOT =  16.68176P 
+
+
+Node IB25A
+  VSSA  C =  376.22092F
+  IB25A  C =  11.26996F 
+  XI1.VT  C =  10.13805F 
+  VO  C =  5.06903F  
+  CFIX =  0.00000    CVAR  =  402.69796F   CTOT =  402.69796F
+
+
+Node VIN
+  VSSA  C =  1.63925F  
+  XI1.VD1  C =  1.27630F  
+  XI1.VT  C =  7.43058F  
+  CFIX =  0.00000    CVAR  =  10.34612F    CTOT =  10.34612F 
+
+
+Node XI1.VD1
+  VSSA  C =  4.15760F  
+  VIN  C =  3.71291F  
+  XI1.VT  C = -3.04669F  
+  VDDA  C =  19.52643F 
+  XI1.VD1  C =  5.45688F  
+  XI1.VD2  C =  1.63259F  
+  CFIX =  0.00000    CVAR  =  31.43972F    CTOT =  31.43972F 
+
+
+Node XI1.VD2
+  VIP  C =  3.71291F  
+  VSSA  C =  4.15968F  
+  XI1.VT  C = -3.04672F  
+  VDDA  C =  11.09501F 
+  XI1.VD1  C =  3.82429F  
+  VO  C =  1.63259F  
+  CFIX =  0.00000    CVAR  =  21.37776F    CTOT =  21.37776F 
+
+
+Node VO
+  VDDA  C =  2.53464F  
+  XI1.VD2  C =  3.82429F  
+  VSSA  C =  15.97951P 
+  IB25A  C =  40.01082F 
+  XI1.VRC  C =  51.00000P 
+  CFIX =  67.00000P   CVAR  =  25.88273F    CTOT =  67.02588P 
+
+
+Node XI1.VT
+  VSSA  C = -22.54612F 
+  VIN  C =  4.92287F  
+  XI1.VD1  C =  8.21899A  
+  VIP  C =  4.92287F  
+  XI1.VD2  C =  8.21900A  
+  IB25A  C =  80.02164F 
+  CFIX =  0.00000    CVAR  =  67.33770F    CTOT =  67.33770F 
+
+
+Node XI1.VRC
+  VO  C =  51.00000P 
+  CFIX =  51.00000P   CVAR  =  0.00000     CTOT =  51.00000P 
+
+
+               XI1.M1            XI1.M2            XI1.M6            XI1.M7            XI1.M8            
+
+MODEL          CMOSN             CMOSN             CMOSN             CMOSN             CMOSN             
+MFACTOR         1.0000000000E+00  1.0000000000E+00  1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 
+ID              9.8651842722E-05  9.8701021885E-05  2.5000000000E-05  1.9735285054E-04  1.0142223951E-04 
+VGS             1.6159889152E+00  1.6162797259E+00  1.4105153898E+00  1.4105153898E+00  1.4105153898E+00 
+VDS             1.8337533417E+00  1.8277715485E+00  1.4105153898E+00  8.3372027407E-01  2.4497091893E+00 
+VBS            -8.3372027407E-01 -8.3372027407E-01  0.0               0.0               0.0              
+VTH             9.9007097117E-01  9.9008466892E-01  7.9108565678E-01  7.9108437091E-01  7.9108669095E-01 
+VDSAT           4.7836788660E-01  4.7855049626E-01  4.4354684181E-01  4.4354994490E-01  4.4354373730E-01 
+GM              2.6821799840E-04  2.6823316118E-04  7.5534344705E-05  5.9508864169E-04  3.0582718311E-04 
+GDS             4.7777358490E-06  4.7917897949E-06  4.3287612820E-07  6.5400250268E-06  1.1563251601E-06 
+RON             2.0930416239E+05  2.0869028960E+05  2.3101296996E+06  1.5290461365E+05  8.6480864946E+05 
+GMB             6.6710876997E-05  6.6718595463E-05  2.9555830270E-05  2.3300220441E-04  1.1958222573E-04 
+Cdd             4.8238234160E-15  4.8258701148E-15  5.3782190448E-15  4.6519119076E-14  1.9523796879E-14 
+Cdg            -3.7129094308E-15 -3.7129094366E-15 -1.0002705107E-14 -8.0021640868E-14 -4.0010820418E-14 
+Cds             3.0466857192E-15  3.0467214702E-15  1.2634926357E-14  1.0107991643E-13  5.0539279454E-14 
+Cdb            -4.1575997044E-15 -4.1596821483E-15 -8.0104402952E-15 -6.7577394639E-14 -3.0052255915E-14 
+Cgd            -1.2762980162E-15 -1.2762980056E-15 -1.2672565239E-15 -1.0138052200E-14 -5.0690260909E-15 
+Cgg             1.0346119325E-14  1.0346119287E-14  3.0563055341E-14  2.4450448516E-13  1.2225219857E-13 
+Cgs            -7.4305758251E-15 -7.4307085348E-15 -2.4309380050E-14 -1.9447642814E-13 -9.7236306618E-14 
+Cgb            -1.6392454835E-15 -1.6391127469E-15 -4.9864187674E-15 -3.9890004821E-14 -1.9946865858E-14 
+Csd            -8.2189916002E-18 -8.2189969046E-18 -1.0855738286E-20 -8.6841544382E-20 -4.3425296669E-20 
+Csg            -4.9228710380E-15 -4.9228710467E-15 -1.4370418382E-14 -1.1496334708E-13 -5.7481673516E-14 
+Css             1.0409263555E-14  1.0409316637E-14  2.5983072969E-14  2.0786544751E-13  1.0393161898E-13 
+Csb            -5.4781735250E-15 -5.4782265931E-15 -1.1612643732E-14 -9.2902013592E-14 -4.6449902037E-14 
+Cbd            -3.5393064082E-15 -3.5413531123E-15 -4.1109516651E-15 -3.6380980034E-14 -1.4454727363E-14 
+Cbg            -1.7103388560E-15 -1.7103388039E-15 -6.1899318526E-15 -4.9519497216E-14 -2.4759704632E-14 
+Cbs            -6.0253734487E-15 -6.0253295721E-15 -1.4308619276E-14 -1.1446893580E-13 -5.7234591814E-14 
+Cbb             1.1275018713E-14  1.1277021488E-14  2.4609502794E-14  2.0036941305E-13  9.6449023810E-14 
+PHI             8.4575842024E-01  8.4575842024E-01  8.4575842024E-01  8.4575842024E-01  8.4575842024E-01 
+VBI             1.0091491456E+00  1.0091491456E+00  1.0091491456E+00  1.0091491456E+00  1.0091491456E+00 
+Region         saturation        saturation        saturation        saturation        saturation        
+VTH_D           6.2591794408E-01  6.2619505701E-01  6.1942973302E-01  6.1943101889E-01  6.1942869884E-01 
+
+               XI1.M3            XI1.M4            XI1.M5            
+
+MODEL          CMOSP             CMOSP             CMOSP             
+MFACTOR         1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 
+ID             -9.8651842722E-05 -9.8701021885E-05 -1.0142224196E-04 
+VGS            -1.8325263842E+00 -1.8325263842E+00 -1.8385081774E+00 
+VDS            -1.8325263842E+00 -1.8385081774E+00 -2.0502908107E+00 
+VBS             0.0               0.0               0.0              
+VTH            -8.6445856569E-01 -8.6441989110E-01 -8.6305412485E-01 
+VDSAT          -8.3931141329E-01 -8.3934097799E-01 -8.4507426042E-01 
+GM              1.7030111907E-04  1.7038502015E-04  1.7383150986E-04 
+GDS             8.2521446122E-06  8.2368810754E-06  7.8234714209E-06 
+RON             1.2118061995E+05  1.2140517641E+05  1.2782049632E+05 
+GMB             4.7782683195E-05  4.7803908681E-05  4.8673375686E-05 
+Cdd             6.4958343692E-15  6.4918681291E-15  6.3589345836E-15 
+Cdg            -3.8242921208E-15 -3.8242921208E-15 -3.8242921209E-15 
+Cds             2.7816354650E-15  2.7815986682E-15  2.7802916156E-15 
+Cdb            -5.4531777135E-15 -5.4491746764E-15 -5.3149340784E-15 
+Cgd            -1.6325888345E-15 -1.6325888246E-15 -1.6325882782E-15 
+Cgg             1.0060030826E-14  1.0060030717E-14  1.0060024709E-14 
+Cgs            -7.4963682897E-15 -7.4962675622E-15 -7.4938045987E-15 
+Cgb            -9.3107370130E-16 -9.3117433015E-16 -9.3363183248E-16 
+Csd            -2.0951214742E-17 -2.0951220129E-17 -2.0951518193E-17 
+Csg            -4.8995691425E-15 -4.8995691425E-15 -4.8995691426E-15 
+Css             1.3291655460E-14  1.3291598282E-14  1.3289528029E-14 
+Csb            -8.3711351023E-15 -8.3710779195E-15 -8.3690073680E-15 
+Cbd            -4.8422943200E-15 -4.8383280843E-15 -4.7053947872E-15 
+Cbg            -1.3361695623E-15 -1.3361694537E-15 -1.3361634460E-15 
+Cbs            -8.5769226348E-15 -8.5769293880E-15 -8.5760150457E-15 
+Cbb             1.4755386517E-14  1.4751426926E-14  1.4617573279E-14 
+PHI             7.9562542838E-01  7.9562542838E-01  7.9562542838E-01 
+VBI             9.8474415957E-01  9.8474415957E-01  9.8474415957E-01 
+Region         saturation        saturation        saturation        
+VTH_D           9.6806781851E-01  9.6810649310E-01  9.7545405258E-01 
+
+               XI1.RC            RF                RS                
+V+              2.6614918226E+00  2.4497091893E+00  2.4497091893E+00 
+V-              2.6614918226E+00  2.4497091893E+00  0.0              
+ID              0.0               0.0               2.4497091893E-12 
+
+               XI1.CC            CL                
+V+              2.6614918226E+00  2.4497091893E+00 
+V-              2.4497091893E+00  0.0              
+ID              0.0               0.0              
+
+
+***> 25-Sep-2022 13:00:37 - AC completed: WALL CLOCK ELAPSED TIME 0s <***
+
+
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:37******
+
+0OPAMP SCALED BY 16X
+
+0****     EXTRACT INFORMATION                
+0****   TEMPERATURE =  8.5000000000E+01 Celsius
+0****   ALTER index 4    OPAMP SCALED BY 16X
+
+0***********************************************************************
+
+
+
+  OASCALE       =  1.6000000000E+01   
+  ADC           =  5.1800855234E+01   
+  UGBW          =  6.8502643521E+05   
+  UGBW_PHASE    = -1.2544706782E+02   
+  PHASE_MARGIN  =  5.4552932183E+01   
+
+1*******25-Sep-2022 *******  ELDO 2021.2 update2 (64 bits)  (v21.2_2.1)  *******13:00:37******
+
+0OPAMP SCALED BY 16X
+
+0****     ACCOUNTING INFORMATION             TEMPERATURE =   85.000 DEG C
+
+0***********************************************************************
+
+
+
+
+
+
+-----------| Simulated Design Summary |------------
+
+Detail about objects and nodes simulated:
+Number of nodes                     26
+Number of intrinsic nodes           16
+Number of input signals             3
+Number of resistors                 3
+Number of floating capacitors       2
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           3
+Number of current sources           1
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       8
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  17
+Repartition per level of MOS
+  BSIM3V3 8
+Number of equations                 29
+Number of non-zero terms            181
+Percent Zeros                      78.48
+Number of Newton iterations         32
+Number of AC points                 91
+Evaluation of active devices        1707
+Virtual memory size (MB)            433
+Peak memory size (MB)      46
+---------------------------------------------------
+***>MESSAGE SUMMARY: 8 warnings
+
+***> 25-Sep-2022 13:00:37 - GLOBAL CPU TIME 0s 070ms <***
+
+
+***> 25-Sep-2022 13:00:37 - GLOBAL WALL CLOCK ELAPSED TIME 6s <***
+
+
+  Job started at 25-Sep-2022 13:00:31
+  Job end at     25-Sep-2022 13:00:37
+
+  Run on ecs-pa-einstein.ecs.csus.edu (Linux 3.10.0-1160.76.1.el7.x86_64)
+
+-----------------------------------------
+Maximum number of license(s) consumed:
+   1 Analog Simulator Kernel (eldokernel)
+
+Time spent acquiring licenses: 0.048 s (avg: 0.024 s, max: 0.044 s at Sun Sep 25 13:00:31 2022)
+Time spent releasing licenses: 0.078 s (avg: 0.039 s, max: 0.039 s at Sun Sep 25 13:00:37 2022)
+-----------------------------------------
+
+Simulation Finished.

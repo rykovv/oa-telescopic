@@ -1,0 +1,9 @@
+
+TITLE AC response for 2-stage opamp with NMOS inputs
+EXTRACT for AC ANALYSIS                       
+  TEMPERATURE =  5.0000000000E+01 Celsius
+    *OASCALE       =  1.0000000000E+00   
+    *ADC           =  3.8209643088E+01   
+    *UGBW          =  6.4257997179E+07   
+    *UGBW_PHASE    = -9.0274029840E+01   
+    *PHASE_MARGIN  =  8.9725970160E+01   

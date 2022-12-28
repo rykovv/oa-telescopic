@@ -1,0 +1,7 @@
+START report: Wed Nov 30 11:53:40 2022 
+** Note: (eldo-71)  In file "/home/student/vrykov/EEE235/sims/zz_oa_telescopicNin_dc3/setup.in" line 17:
++   Option NOWARN found: no more warning 240 displayed.
+** Warning: (eldo-346)  COMMAND ".PROBE": node XI1.VD1 undeclared.
+** Warning: (eldo-346)  COMMAND ".PROBE": node XI1.VD1 undeclared.
+** Warning: (eldo-346)  COMMAND ".PROBE": node XI1.VD2 undeclared.
+** Warning: (eldo-346)  COMMAND ".PROBE": node XI1.VD2 undeclared.
